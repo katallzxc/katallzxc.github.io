@@ -1,30 +1,379 @@
-<html>
+<html lang="en-CA">
 <head>
     <title>Katie Allison</title>
     <meta charset="UTF-8">
     <meta name="description" content="Personal website and portfolio.">
     <meta name="author" content="Katie Allison">
-</header>
+    <link rel="stylesheet" href="static/style/style.css" />
+</head>
 
 <body>
+    <!-- The main header used across all the pages of our website -->
 
-    <p>
-        Hello World
-    </p>
+    <header class="myheader">
+        <h1>
+            Katie Allison
+        </h1>
+    </header>
+  
+    <nav>
+        <!-- <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul> -->
+  
+    <!-- A Search form: another common non-linear way to navigate through a site. -->
+  
+        <!-- <form>
+            <input type="search" name="q" placeholder="Search query" />
+            <input type="submit" value="Go!" />
+        </form> -->
+    </nav>
+  
+    <!-- Our page's main content -->
+    <main>
+        <article id="intro">
+            <figure class="wrapfig">
+                <img
+                    src="static/img/katie_headshot.JPG"
+                    alt="Katie Allison, headshot."
+                    width="300"
+                />
+              
+                <figcaption>
+                  A picture of me in fall 2021.
+                </figcaption>
+            </figure>
 
-    <h1>Education</h1>
+            <p>
+                Hi! I'm Katie, a roboticist and engineering design educator with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
+            </p>
+
+            <a href=https://github.com/katallzxc>GitHub profile</a>
+
+            <a
+                href="static/PDF/ResumeKatieAllison.pdf"
+                download="ResumeKatieAllison.pdf">
+                Resume (PDF)
+            </a>
+
+            <a href="mailto:katherineallison98@gmail.com">Email</a>
+
+            <p class="cleared">
+                Check out some of my projects and experiences below!
+            </p>
+
+            <!-- <ul>
+                <li>milk</li>
+                <li>eggs</li>
+                <li>bread</li>
+                <li>hummus</li>
+            </ul>
+            <ol>
+                <li>milk</li>
+                <li>eggs</li>
+                <li>bread</li>
+                <li>hummus</li>
+            </ol> -->
+
+            <!-- <dl>
+                <dt>soliloquy</dt>
+                <dd>
+                In drama, where a character speaks to themselves, representing their inner
+                thoughts or feelings and in the process relaying them to the audience (but
+                not to other characters.)
+                </dd>
+                <dt>monologue</dt>
+                <dd>
+                In drama, where a character speaks their thoughts out loud to share them
+                with the audience and any other characters present.
+                </dd>
+                <dt>aside</dt>
+                <dd>
+                In drama, where a character shares a comment only with the audience for
+                humorous or dramatic effect. This is usually a feeling, thought, or piece of
+                additional background information.
+                </dd>
+            </dl> -->
+
+            <!-- <p style="font-family:courier;">
+                Hello World
+            </p> -->
+        </article>
+
+        <article id="projects">
+            <h2 style="background-color:powderblue;text-align:center;">
+                Projects
+            </h2>
+            
+            <section id="proj-fingerpads">
+                <h3 style="color:darkblue;">
+                    <strong>Adaptive gripper fingerpads</strong> | M.A.Sc. thesis
+                </h3>
+                <figure class="wrapfig">
+                    <img
+                        src="static/img/full_gripped_ball_smaller.png"
+                        alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a small spherical object."
+                        width="400"
+                    />
+                  
+                    <figcaption>
+                      Inflated adaptive gripper fingerpads gripping a round object.
+                    </figcaption>
+                </figure>
+            </section>
+            <hr class="cleared"/>
+            
+            <section id="proj-forcetest">
+                <h3 style="color:darkblue;">
+                    <strong>Linear shear force tester</strong> | M.A.Sc. thesis
+                </h3>
+
+                <figure class="wrapfig">
+                    <img
+                        src="static/img/shear_test_overview.jpg"
+                        alt="Lead screw system with force gauge and robotic gripper installed, pictured with a microcontroller-based motor control circuit and a custom pneumatic control apparatus."
+                        width="400"
+                    />
+                  
+                    <figcaption>
+                      Shear force tester (bottom, left) pictured with multi-channel pneumatic controller (top right).
+                    </figcaption>
+                </figure>
+            </section>
+            <hr class="cleared"/>
+            
+            <section id="proj-reedscan">
+                <h3 style="color:darkblue;">
+                    <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
+                </h3>
+
+                <figure class="wrapfig">
+                    <img
+                        src="static/img/legere_scanner_partialclean.png"
+                        alt="Dual-stage confocal-light-based scanner, shown as view of dual-axis linear stage and partial view of motor control circuitry and sensor controller units."
+                        width="400"
+                    />
+                  
+                    <figcaption>
+                      System scanning the 3D profile of one half of a double reed.
+                    </figcaption>
+                </figure>
+            </section>
+            <hr class="cleared"/>
+            
+            <section id="proj-WISEworkshop">
+                <h3 style="color:darkblue;">
+                    <strong>Introductory mechatronics workshop modules</strong> | Women in Robotics Ontario
+                </h3>
+
+                <figure class="wrapfig">
+                    <img
+                        src="static/img/wise_workshop_all_cropped.png"
+                        alt="Various sensor and actuator circuit modules displayed on a table, each packaged in a wooden enclosure from which only the transducer and input wires are accessible."
+                        width="400"
+                    />
+                  
+                    <figcaption>
+                      Assorted sensor and actuator modules from Mechatronics 101 workshop.
+                    </figcaption>
+                </figure>
+            </section>
+            <hr class="cleared"/>
+            
+            <section id="proj-ESC204workshop">
+                <h3 style="color:darkblue;">
+                    <strong>Sensor and actuator laboratory activity modules</strong> | Division of Engineering Science (ESC204: Praxis III)
+                </h3>
+
+                <figure class="wrapfig">
+                    <img
+                        src="static/img/ESC204_workshop_all_cropped.png"
+                        alt="Stacked plastic containers and plastic bags with labels indicating the components inside and the associated laboratory activity."
+                        width="400"
+                    />
+                  
+                    <figcaption>
+                      Stacked student component kits from a sensor and actuator laboratory activity.
+                    </figcaption>
+                </figure>
+            </section>
+        </article>
+
+        <p class="cleared"></p>
+
+        <article id="education">
+            <h2 style="background-color:powderblue;text-align:center;">
+                Education
+            </h2>
+
+            <section id="MAsc">
+                <h3>
+                    Master's of Applied Science in Mechanical Engineering
+                </h3>
+                
+                <p>
+                    M.A.Sc. thesis, <em>Fingerpads with Adaptive Surface Properties for Robotic Gripping</em>, defended <strong><time datetime="2024-12">December 2024</time></strong>
+                </p>
+            </section>
+
+            <section id="BASc">
+                <h3>
+                    Bachelor's of Applied Science in Engineering Science (Robotics Major)
+                </h3>
+                
+                <p>
+                    B.A.Sc. thesis, <em>Control-theoretic model for flocculus to simulate optokinetic response behaviours</em>, presented <strong><time datetime="2021-03">March 2021</time></strong>
+                </p>
+            </section>
+        </article>
+
+        <article id="experience">
+            <h2 style="background-color:powderblue;text-align:center;">
+                Experience
+            </h2>
+
+            <section id="exp-Legere">
+                <h3>
+                    Design Engineer | Legere Reeds Ltd.
+                </h3>
+            </section>
+
+            <section id="exp-CI">
+                <h3>
+                    Course Instructor | Division of Engineering Science, University of Toronto
+                </h3>
+            </section>
+
+            <section id="exp-York">
+                <h3>
+                    Research Assistant | York University
+                </h3>
+            </section>
+
+            <section id="exp-WIR">
+                <h3>
+                    Chapter Organizer | Women in Robotics Ontario Chapter
+                </h3>
+            </section>
+
+            <section id="exp-SFA">
+                <h3>
+                    Standard First Aid Instructor | Lifesaving Society
+                </h3>
+            </section>
+        </article>
+
+        <article id="misc">
+            <h2 style="background-color:powderblue;text-align:center;">
+                Publications, Awards, and Certificates
+            </h2>
+
+            <section id="publications">
+                <h3>
+                    Publications
+                </h3>
+
+                <ul>
+                    <li><strong>K. Allison</strong>, J. Kelly, and B. Hatton. ``Structured Pneumatic Fingerpads for Actively Tunable Grip Friction,'', to be presented at <em>2025 IEEE Intl. Conf. on Soft Robotics</em>, Lausanne, Apr. 2025. arxiv.org/abs/2502.00926</li>
+                    <li>R. Codd-Downey, M. Jenkin and <strong>K. Allison</strong>, ``Milton: An open hardware underwater autonomous vehicle,'' <em>2017 IEEE Intl. Conf. on Information and Automation</em>, Macau, 2017, pp. 30-34, DOI:10.1109/ICInfA.2017.8078878.</li>
+                </ul>
+            </section>
+
+            <section id="awards">
+                <h3>
+                    Awards
+                </h3>
+            </section>
+
+            <section id="certificates">
+                <h3>
+                    Certificates
+                </h3>
+            </section>
+
+        </article>
     
-    <p>
-        <strong><em>M.A.Sc. thesis defended December 2024</em></strong>
-    </p>
+        <!-- An article example -->
+        <!-- <article id="example">
+            <h2>Article heading</h2>
+  
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+            lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+            viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+            et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+            congue enim, ut porta lorem lacinia consectetur.
+            </p>
 
-    <h1>
-        Experience
-    </h1>
+            <p>
+                I'm creating a link to
+                <a
+                    href="https://www.mozilla.org/en-US/"
+                    title="The best place to find more information about Mozilla's
+                        mission and how to contribute">
+                    the Mozilla homepage
+                </a>.
+            </p>
+  
+            <section>
+                <h3>Subsection</h3>
+  
+                <p>
+                Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
+                gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
+                dolor.
+                </p>
+  
+                <p>
+                Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+                dapibus, enim sit amet elit pharetra tincidunt feugiat nist
+                imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
+                odio eros.
+                </p>
+            </section>
+  
+            <section>
+                <h3>Another subsection</h3>
     
-    <h1>
-        Projects
-    </h1>
+                <p>
+                Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+                soclis natoque penatibus et manis dis parturient montes, nascetur
+                ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
+                sem facilisis semper ac in est.
+                </p>
+    
+                <p>
+                Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+                tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+                ultricied. Curabitur ornare, ligula semper consectetur sagittis,
+                nisi diam iaculis velit, is fringille sem nunc vet mi.
+                </p>
+            </section>
+        </article> -->
+  
+        <!-- the aside content can also be nested within the main content -->
+        <!-- <aside>
+            <h2>Related</h2>
+  
+            <ul>
+                <li><a href="#">Oh I do like to be beside the seaside</a></li>
+                <li><a href="#">Oh I do like to be beside the sea</a></li>
+                <li><a href="#">Although in the North of England</a></li>
+                <li><a href="#">It never stops raining</a></li>
+                <li><a href="#">Oh well…</a></li>
+            </ul>
+        </aside> -->
+    </main>
+  
+    <!-- The footer that is used across all the pages of our website -->
+  
+    <!-- <footer>
+        <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer> -->
 
 </body>
 
