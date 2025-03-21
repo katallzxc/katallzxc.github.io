@@ -1,0 +1,47 @@
+ul {
+    background: #dbf9db;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+li {
+    margin-left: 20px;
+  }
+
+.wrapfig {
+  float: left;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: #dbf9db;
+  padding: 1em;
+}
+
+.cleared {
+  clear: left;
+}
+
+/* below from Mozilla, temporary */
+.myheader {
+  background: #33589f;
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(42,65,135) 0%,
+      rgb(59,105,177) 100%
+  );
+  background: linear-gradient(
+      center bottom,
+      rgb(42,65,135) 0%,
+      rgb(59,105,177) 100%
+  );
+  height: 57px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-family: verdana;
+  -moz-box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
+  box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
