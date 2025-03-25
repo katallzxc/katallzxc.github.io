@@ -9,8 +9,8 @@
 
 <body>
     <!-- The main header used across all the pages of our website -->
-
-    <header class="myheader">
+<div class="wrapper">
+    <header>
         <h1>
             Katie Allison
         </h1>
@@ -48,7 +48,7 @@
             </figure>
 
             <p>
-                Hi! I'm Katie, a roboticist and engineering design educator with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
+                Hi! I'm Katie, a <span>roboticist and engineering design educator</span> with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
             </p>
 
             <a href=https://github.com/katallzxc>GitHub profile</a>
@@ -65,147 +65,124 @@
                 Check out some of my projects and experiences below!
             </p>
 
-            <!-- <ul>
-                <li>milk</li>
-                <li>eggs</li>
-                <li>bread</li>
-                <li>hummus</li>
-            </ul>
-            <ol>
-                <li>milk</li>
-                <li>eggs</li>
-                <li>bread</li>
-                <li>hummus</li>
-            </ol> -->
-
-            <!-- <dl>
-                <dt>soliloquy</dt>
-                <dd>
-                In drama, where a character speaks to themselves, representing their inner
-                thoughts or feelings and in the process relaying them to the audience (but
-                not to other characters.)
-                </dd>
-                <dt>monologue</dt>
-                <dd>
-                In drama, where a character speaks their thoughts out loud to share them
-                with the audience and any other characters present.
-                </dd>
-                <dt>aside</dt>
-                <dd>
-                In drama, where a character shares a comment only with the audience for
-                humorous or dramatic effect. This is usually a feeling, thought, or piece of
-                additional background information.
-                </dd>
-            </dl> -->
-
-            <!-- <p style="font-family:courier;">
-                Hello World
-            </p> -->
         </article>
 
         <article id="projects">
-            <h2 style="background-color:powderblue;text-align:center;">
+            <h2>
                 Projects
             </h2>
-            
-            <section id="proj-fingerpads">
-                <h3 style="color:darkblue;">
-                    <strong>Adaptive gripper fingerpads</strong> | M.A.Sc. thesis
-                </h3>
-                <figure class="wrapfig">
-                    <img
-                        src="static/img/full_gripped_ball_smaller.png"
-                        alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a small spherical object."
-                        width="400"
-                    />
-                  
-                    <figcaption>
-                      Inflated adaptive gripper fingerpads gripping a round object.
-                    </figcaption>
-                </figure>
-            </section>
-            <hr class="cleared"/>
-            
-            <section id="proj-forcetest">
-                <h3 style="color:darkblue;">
-                    <strong>Linear shear force tester</strong> | M.A.Sc. thesis
-                </h3>
 
-                <figure class="wrapfig">
-                    <img
-                        src="static/img/shear_test_overview.jpg"
-                        alt="Lead screw system with force gauge and robotic gripper installed, pictured with a microcontroller-based motor control circuit and a custom pneumatic control apparatus."
-                        width="400"
-                    />
-                  
-                    <figcaption>
-                      Shear force tester (bottom, left) pictured with multi-channel pneumatic controller (top right).
-                    </figcaption>
-                </figure>
-            </section>
-            <hr class="cleared"/>
-            
-            <section id="proj-reedscan">
-                <h3 style="color:darkblue;">
-                    <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
-                </h3>
+            <div class="projgrid">
+                <div class="projbox">
+                <section class="cleared",id="proj-fingerpads">
+                    <h3 style="color:darkblue;">
+                        <strong>Adaptive gripper fingerpads</strong> | M.A.Sc. thesis
+                    </h3>
+                    <ul class="projprop">
+                        <li class="special"><strong>Role:</strong> Research student</li>
+                        <li><strong>Period:</strong> <span>2023-2024</span></li>
+                        <li><strong>Skills:</strong> CAD (Fusion 360, AutoCAD), CAM (3D printing, laser cutting, 5-axis CNC milling), power tools, assembly, pneumatics, elastomer moulding</li>
+                    </ul>
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/full_gripped_ball_smaller.png"
+                            alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a small spherical object."
+                            width="400"
+                        />
+                    
+                        <figcaption>
+                        Inflated adaptive gripper fingerpads gripping a round object.
+                        </figcaption>
+                    </figure>
+                </section>
+                </div>
 
-                <figure class="wrapfig">
-                    <img
-                        src="static/img/legere_scanner_partialclean.png"
-                        alt="Dual-stage confocal-light-based scanner, shown as view of dual-axis linear stage and partial view of motor control circuitry and sensor controller units."
-                        width="400"
-                    />
-                  
-                    <figcaption>
-                      System scanning the 3D profile of one half of a double reed.
-                    </figcaption>
-                </figure>
-            </section>
-            <hr class="cleared"/>
-            
-            <section id="proj-WISEworkshop">
-                <h3 style="color:darkblue;">
-                    <strong>Introductory mechatronics workshop modules</strong> | Women in Robotics Ontario
-                </h3>
+                <div class="projbox">
+                <section id="proj-forcetest">
+                    <h3 style="color:darkblue;">
+                        <strong>Linear shear force tester</strong> | M.A.Sc. thesis
+                    </h3>
 
-                <figure class="wrapfig">
-                    <img
-                        src="static/img/wise_workshop_all_cropped.png"
-                        alt="Various sensor and actuator circuit modules displayed on a table, each packaged in a wooden enclosure from which only the transducer and input wires are accessible."
-                        width="400"
-                    />
-                  
-                    <figcaption>
-                      Assorted sensor and actuator modules from Mechatronics 101 workshop.
-                    </figcaption>
-                </figure>
-            </section>
-            <hr class="cleared"/>
-            
-            <section id="proj-ESC204workshop">
-                <h3 style="color:darkblue;">
-                    <strong>Sensor and actuator laboratory activity modules</strong> | Division of Engineering Science (ESC204: Praxis III)
-                </h3>
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/shear_test_overview.jpg"
+                            alt="Lead screw system with force gauge and robotic gripper installed, pictured with a microcontroller-based motor control circuit and a custom pneumatic control apparatus."
+                            width="400"
+                        />
+                    
+                        <figcaption>
+                        Shear force tester (bottom, left) pictured with multi-channel pneumatic controller (top right).
+                        </figcaption>
+                    </figure>
+                </section>
+                </div>
 
-                <figure class="wrapfig">
-                    <img
-                        src="static/img/ESC204_workshop_all_cropped.png"
-                        alt="Stacked plastic containers and plastic bags with labels indicating the components inside and the associated laboratory activity."
-                        width="400"
-                    />
-                  
-                    <figcaption>
-                      Stacked student component kits from a sensor and actuator laboratory activity.
-                    </figcaption>
-                </figure>
-            </section>
+                <div class="projbox">
+                <section id="proj-reedscan">
+                    <h3 style="color:darkblue;">
+                        <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
+                    </h3>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/legere_scanner_partialclean.png"
+                            alt="Dual-stage confocal-light-based scanner, shown as view of dual-axis linear stage and partial view of motor control circuitry and sensor controller units."
+                            width="400"
+                        />
+                    
+                        <figcaption>
+                        System scanning the 3D profile of one half of a double reed.
+                        </figcaption>
+                    </figure>
+                </section>
+                </div>
+
+                <div class="projbox">
+                <section id="proj-WISEworkshop">
+                    <h3 style="color:darkblue;">
+                        <strong>Introductory mechatronics workshop modules</strong> | Women in Robotics Ontario
+                    </h3>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/wise_workshop_all_cropped.png"
+                            alt="Various sensor and actuator circuit modules displayed on a table, each packaged in a wooden enclosure from which only the transducer and input wires are accessible."
+                            width="400"
+                        />
+                    
+                        <figcaption>
+                        Assorted sensor and actuator modules from Mechatronics 101 workshop.
+                        </figcaption>
+                    </figure>
+                </section>
+                </div>
+
+                <div class="projbox">
+                <section id="proj-ESC204workshop">
+                    <h3 style="color:darkblue;">
+                        <strong>Sensor and actuator laboratory activity modules</strong> | Division of Engineering Science (ESC204: Praxis III)
+                    </h3>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/ESC204_workshop_all_cropped.png"
+                            alt="Stacked plastic containers and plastic bags with labels indicating the components inside and the associated laboratory activity."
+                            width="400"
+                        />
+                    
+                        <figcaption>
+                        Stacked student component kits from a sensor and actuator laboratory activity.
+                        </figcaption>
+                    </figure>
+                </section>
+                </div>
+            </div>
         </article>
 
         <p class="cleared"></p>
 
         <article id="education">
-            <h2 style="background-color:powderblue;text-align:center;">
+            <h2>
                 Education
             </h2>
 
@@ -231,7 +208,7 @@
         </article>
 
         <article id="experience">
-            <h2 style="background-color:powderblue;text-align:center;">
+            <h2>
                 Experience
             </h2>
 
@@ -267,7 +244,7 @@
         </article>
 
         <article id="misc">
-            <h2 style="background-color:powderblue;text-align:center;">
+            <h2>
                 Publications, Awards, and Certificates
             </h2>
 
@@ -374,7 +351,7 @@
     <!-- <footer>
         <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer> -->
-
+</div>
 </body>
 
 </html>

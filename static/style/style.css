@@ -1,18 +1,60 @@
-ul {
-    background: #dbf9db;
-    padding: 10px;
-    border: 1px solid black;
-  }
+/* General style */
+body {
+	--headerColour: indigo;
+	--mainText: Black;
+	--headerText: White;
+	--backgroundColour: White;
+	--backgroundAltColour: powderblue;
+	--unvisitedHyperlink: Blue;
+	--clickedLinks: indigo ;
+	--activeHyperlink: Red;
+	
+	font-family: Trebuchet, sans-serif;
+	text-align: justify;
+	margin: 0;
+	color: var(--mainText);
+	max-width: 50em;
+	margin: 0px auto;
+	background-color: var(--backgroundColour);
+}
+
+div.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 1em;
+}
+
+/* Header style */
+header {
+	text-align: center;
+	text-transform: capitalize;
+	background-color:indigo;
+	
+	width: 100%;
+	position: relative;
+	
+	padding: 1em 0em 1em 0em;
+	margin:0;
+}
+
+header h1 {
+  margin: 0; 
+	color: var(--headerText);
+}
+
+/*prev powderblue */
+h2 {
+  background-color:mediumpurple;
+  text-align:center;
+}
   
-li {
-    margin-left: 20px;
-  }
 
 .wrapfig {
   float: left;
   margin-right: 15px;
   border-radius: 5px;
-  background-color: #dbf9db;
+  background-color: var(--backgroundColour);
   padding: 1em;
 }
 
@@ -20,28 +62,39 @@ li {
   clear: left;
 }
 
-/* below from Mozilla, temporary */
-.myheader {
-  background: #33589f;
-  background: -moz-linear-gradient(
-      center bottom,
-      rgb(42,65,135) 0%,
-      rgb(59,105,177) 100%
-  );
-  background: linear-gradient(
-      center bottom,
-      rgb(42,65,135) 0%,
-      rgb(59,105,177) 100%
-  );
-  height: 57px;
-  margin: 0 auto;
-  margin-top: 10px;
-  font-family: verdana;
-  -moz-box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
-  box-shadow: 0 3px rgba(0,0,0,0.1), inset 0 -4px rgba(0,0,0,0.1);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  text-align: center;
+.projgrid {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.projprop {
+  color: darkslategrey;
+  font-size: 0.8em;
+  list-style:none;
+}
+
+.box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  padding: 25px;
+  border: 5px solid black;
+}
+
+.projbox {
+  display: flex;
+  align-items: flex-start;
+  height:max-content;
+  margin: 10px;
+  padding: 25px;
+  background-color: var(--backgroundColour);
+  border: 5px solid indigo;
+  border-radius: 10px;
+}
+
+.projcontent {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  padding: 25px;
 }
