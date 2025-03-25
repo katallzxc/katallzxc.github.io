@@ -1,0 +1,468 @@
+/*Savo examples*/
+
+:root {
+	font-size:18px;
+}
+
+@media screen and (max-width: 60em) {
+	:root {
+		font-size:16px;
+		overflow-x: hidden;
+	}
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+	--navBarColour: DodgerBlue;
+	--altNavBarColour: DeepSkyBlue;
+	--mainText: Black;
+	--navText: White;
+	--subtitleText: DimGrey;
+	--backgroundColour: White;
+	--altBackgroundColour: Gainsboro;
+	--unvisitedHyperlink: Blue;
+	--clickedLinks: Purple ;
+	--activeHyperlink: Red;
+	
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+	color: var(--mainText);
+	max-width: 58em;
+	margin: 0px auto;
+	background-color: var(--backgroundColour);
+	
+	text-align: justify;
+	
+	overflow-x: hidden;
+}
+
+body.darkMode {
+	--navBarColour: FireBrick;
+	--altNavBarColour: Red;
+	--mainText: White;
+	--navText: White;
+	--subtitleText: WhiteSmoke;	
+	--backgroundColour: Black;
+	--altBackgroundColour: #600000;
+	--unvisitedHyperlink: Red;
+	--clickedLinks: FireBrick ;
+	--activeHyperlink: Blue;
+}
+
+.subtitle {
+	color: var(--subtitleText);
+	font-size: 0.8em;
+}
+div.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 1em;
+}
+
+/* Header and footer config */
+header {
+	text-align: center;
+	text-transform: capitalize;
+	background-color: var(--navBarColour);
+	
+	width: 100%;
+	position: relative;
+	left: -50vw;
+	
+	padding: 0.5em 50vw 0;
+	margin:0;
+}
+
+header h1 {margin: 0;}
+header a, footer a {
+	text-decoration: none; 
+	color: var(--navText);
+}
+
+footer {
+	color: var(--navText); 
+	background-color:DimGray; 
+	bottom:0px; 
+	padding: 10px 50vw;
+	text-align: center; 
+	width: 100%;
+	
+	flex-shrink: 0;
+	width: 100%;
+	position: relative;
+	left: -50vw;
+}
+
+
+/* Nav bar stuff */
+nav {
+	margin: 0 0 0.5em 0; 
+	background-color: var(--navBarColour);
+	text-align: center;
+	text-transform: capitalize;
+	
+	width: 100%;
+	position: relative;
+	left: -50vw;
+	padding: 0 50vw;
+}
+
+nav a {
+  color: var(--navText);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0.5em;
+  display: block;
+}
+
+nav div {
+	text-align: center;
+	padding: 0em;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  
+  margin: 0px auto;
+  max-width: 75em;
+  padding: 0;
+  
+  justify-content: space-around;
+  background-color: var(--navBarColour);
+}
+
+.navbutton, .dropdown {
+  flex: calc(100% / 6);
+}
+@media screen and (max-width: 60em) {
+	.navbutton, .dropdown {
+		flex: calc(100% / 3);
+	}
+}
+
+.navbutton:hover {background-color: var(--altNavBarColour);}
+.dropdown:hover {background-color: var(--altNavBarColour);}
+
+.dropdown-content {
+  opacity: 0;
+  position: absolute;
+  background-color: Grey;
+  box-shadow: 0px 8px 16px 0px var(--altBackgroundColour);
+  z-index: 1;
+  transform: translateY(-100em);
+  transition: opacity 250ms ease-in-out;
+}
+
+
+.dropdown-content a {
+  padding: 0.2em 1em;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a:hover {background-color: var(--altNavBarColour);}
+
+
+
+/* Breadcrumbs */
+
+
+.breadcrumbs{
+	list-style-type: none;
+	display: inline;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+
+ul.breadcrumbs li+li:before {
+  padding: 8px;
+  color: var(--subtitleText);
+  content: " / ";
+}
+
+.breadcrumbs a {
+	text-decoration: none; 
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Lists */
+
+article {
+	border: 1px solid var(--mainText);
+	margin: 1em 0.5em;
+	padding:10px;
+	
+	transition: background-color 250ms ease-in-out;
+}
+
+article:hover {
+  background-color: var(--altBackgroundColour);
+}
+
+article p {
+	margin: 0.25em 0 0;
+}
+article h2 {
+	margin: 0.5em 0 0 0;
+}
+article ul {
+	margin: 0.5em;
+	padding: 0 0 0 0.5em;
+	text-align: left;
+}
+
+article li {
+	margin: 0.25em 0;
+}
+
+img.thumbnail {
+	max-width: 100%;
+	margin: 2px auto;
+	max-height: 30em;
+	display: block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  flex: 50%;
+  max-width: 50%;
+}
+
+
+@media (max-width: 50rem) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* Content */
+
+main {
+	padding: 0;
+	width: 100%;
+	
+	counter-reset: figure;
+	flex-grow: 1;
+	margin: 0 0 1em;
+}
+
+figure {
+	max-width: 100%;
+	margin: 0 1em;
+	padding: 0.25rem;
+}
+
+figure img {
+	max-width: 100%;
+	margin: 2px auto;
+	max-height: 30em;
+	display: block;
+}
+
+figure.schematic img {
+	max-height: 100%;
+	background-color: White;
+}
+
+figure.blackBackground img {
+	background-color: Black;
+}
+
+figure.whiteBackground img {
+	background-color: White;
+}
+
+figcaption::before {
+	counter-increment: figure;
+    content: "Figure " counter(figure) " - ";
+}
+
+figcaption {
+	text-align: center;
+	font-style: italic;
+}
+
+section.mainIntro {
+	margin:25px 0;
+}
+
+section.mainIntro h1 {
+	margin: auto 0 0;
+}
+
+div.introLine {
+	width: calc(50vw + 100%);
+	height: 8px;
+	background-color: var(--navBarColour);
+	margin: 5px 0;
+	position: relative;
+	left: -50vw;
+}
+
+ul, ol {
+  padding: 0 2em 0 2em;
+}
+
+/* Home page */
+
+.intro {
+  display: flex;
+  background-color: var(--navBarColour);
+  padding: 0;
+  margin: 2rem 0;
+  color: var(--navText);
+  font-size: 1.25rem;
+}
+
+.intro h1 {
+	margin: 1rem 0;
+}
+
+.bio-shot {
+  flex-shrink: 0;
+  /* height: 100%; */
+  width: 12em;
+  margin: 0 auto;
+}
+
+img.bio-shot {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+div.bio-bit {
+  padding: 0 2rem;
+  margin: 1rem 0 1em 0;
+}
+
+div.bio-bit a:visited, div.bio-bit a:link {
+  color: var(--mainText);
+}
+
+#recent, #featured {
+	margin: 3rem 0;
+}
+
+@media screen and (max-width: 50rem) {
+	.bio-shot, .bio-bit {
+		flex-basis: 100%;
+	}
+	
+	.bio-shot {
+  width: 100%;
+  margin: 0 auto;
+  height: 20rem;
+}
+	
+	.intro {
+  	display: flex;
+  	flex-direction: column;
+  	height: auto;
+	}
+}
+
+/* Code */
+code, pre {
+  border-radius: 0.3em;
+	background-color: var(--mainText);
+	color: var(--backgroundColour);
+	overflow-x: auto;
+  padding: 0 0.3em;
+}
+pre {
+  padding: 0.6em;
+}
+pre>code {
+  padding: 0; /* Needed to avoid odd indent on first line in multi-line code */
+  
+  /* Inheriting colouring so it doesn't clash with potential syntax highlighting */
+	background-color: inherit; 
+	color: inherit; 
+}
+
+/* Tables */
+table {
+  margin: 0 auto;
+}
+th {
+	padding: 0.25em 1em;
+	border-bottom: 1px solid #ddd;
+}
+td {
+  padding: 0 1em;
+}
+
+ /* Link */
+ /* Note: these only apply to the main body, not header/footer */
+ 
+main a:link {
+  color: var(--unvisitedHyperlink);
+}
+
+main a:visited {
+  color: var(--clickedLinks);
+}
+
+main a:active {
+  color: var(--activeHyperlink);
+}
+
+
+/* Table of contents */
+
+details.tableOfContents>nav {
+	margin: -0.5em 0 0.5em 0; 
+	background-color: inherit;
+	text-transform: capitalize;
+	
+	width: 100%;
+	position: relative;
+}
+
+details.tableOfContents>nav a {
+  color: var(--navText);
+  text-align: left;
+  text-decoration: underline;
+  margin: 0;
+  display: block;
+}
+
+details.tableOfContents>nav ul {
+	list-style-type: none;
+}
+
+details.tableOfContents {
+	margin: 2em 0;
+	background-color: var(--navBarColour);
+	padding: 0.5em 1em;
+}
+
+details.tableOfContents>summary {
+	font-size: 1.5em;
+	font-weight: bold;
+} 
