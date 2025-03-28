@@ -35,36 +35,52 @@
     <!-- Our page's main content -->
     <main>
         <article id="intro">
-            <figure class="wrapfig">
-                <img
-                    src="static/img/katie_headshot.JPG"
-                    alt="Katie Allison, headshot."
-                    width="300"
-                />
-              
-                <figcaption>
-                  A picture of me in fall 2021.
-                </figcaption>
-            </figure>
+            <div class="biobox">
+                <figure class="fullfig">
+                    <img
+                        src="static/img/katie_headshot.JPG"
+                        alt="Katie Allison, headshot."
+                        width="300"
+                    />
+                
+                    <figcaption>
+                    A picture of me on University of Toronto campus in fall 2021.
+                    </figcaption>
+                </figure>
+                <div>
+                    
+                <p>
+                    Hi! I'm Katie, a roboticist and engineering design educator with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
+                    This website showcases a selection of my recent projects and experiences below! Feel free to reach out using the links below for more information.
+                </p>
 
-            <p>
-                Hi! I'm Katie, a <span>roboticist and engineering design educator</span> with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
-            </p>
+                <div class="biocontent">
 
-            <a href=https://github.com/katallzxc>GitHub profile</a>
+                <p>
+                    <strong>Relevant links:</strong>
 
-            <a
-                href="static/PDF/ResumeKatieAllison.pdf"
-                download="ResumeKatieAllison.pdf">
-                Resume (PDF)
-            </a>
-
-            <a href="mailto:katherineallison98@gmail.com">Email</a>
-
-            <p class="cleared">
-                Check out some of my projects and experiences below!
-            </p>
-
+                    <ul>
+                        <li>
+                            Visit my LinkedIn profile
+                        </li>
+                        <li>
+                            Visit my <a href=https://github.com/katallzxc>GitHub profile</a>
+                        </li>
+                        <li>
+                            Download my <a
+                                href="static/PDF/ResumeKatieAllison.pdf"
+                                download="ResumeKatieAllison.pdf">
+                                resume (PDF)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:katherineallison98@gmail.com">Email me</a>
+                        </li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            </div>
         </article>
 
         <article id="projects">
@@ -75,7 +91,7 @@
             <div class="projgrid">
                 <div class="projbox">
                 <section class="cleared",id="proj-fingerpads">
-                    <h3 style="color:darkblue;">
+                    <h3>
                         <strong>Adaptive gripper fingerpads</strong> | M.A.Sc. thesis
                     </h3>
                     <ul class="projprop">
@@ -83,7 +99,8 @@
                         <li><strong>Period:</strong> <span>2023-2024</span></li>
                         <li><strong>Skills:</strong> CAD (Fusion 360, AutoCAD), CAM (3D printing, laser cutting, 5-axis CNC milling), power tools, assembly, pneumatics, elastomer moulding</li>
                     </ul>
-                    <figure class="wrapfig">
+
+                    <figure class="fullfig">
                         <img
                             src="static/img/full_gripped_ball_smaller.png"
                             alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a small spherical object."
@@ -91,7 +108,120 @@
                         />
                     
                         <figcaption>
-                        Inflated adaptive gripper fingerpads gripping a round object.
+                            <em>Figure 1:</em> Inflated adaptive gripper fingerpads gripping a round object.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        My Master's degree research focused on the design and characterization of these friction-tuning adaptive fingerpads. The fingerpads feature a thin, flexible contact layer atop a rigid base layer into which I milled pneumatic channels. These two layers are connected via an adhesive mid-layer with structured (patterned) cutouts. When the fingerpad's internal pneumatic chamber is inflated or deflated, the contact surface deflects up or down in each of the structured active regions defined by these mid-layer cutouts. My thesis tested the extent to which these actively adaptive fingerpads could modify grip friction when installed in place of a commercially available two-fingered gripper's stock fingerpads.
+                    </p>
+
+                    <figure class="fullfig">
+                        <img
+                            src="static/img/modes_gripping_activetopography.png"
+                            alt="Schematic showing sample gripping 'modes' for actively adaptive fingerpads. Neutral, inflated, and deflated modes are depicted."
+                            width="500"
+                        />
+                    
+                        <figcaption>
+                        <em>Figure 2:</em> Conceptual depiction of sample gripping 'modes' for actively adaptive fingerpads with surface microtopography. 
+                        When the fingerpads are inflated as in (c), their surfaces push closer to a gripped object than in the neutral state shown in (a); conversely, when the fingerpads are deflated as in (b), their active region surfaces retract away from a gripped object.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        While developing the design for these fingerpads, I had two key design goals: first, creating adaptive surfaces that could measurably and repeatably tune friction at the grip interface; second, fabricating using common and/or inexpensive materials and processes. 
+                    </p>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/finger_assembly_nobasesplit_cropped.png"
+                            alt="Exploded model showing CAD parts for the three layers of an adaptive fingerpad."
+                            width="250"
+                        />
+                    
+                        <figcaption>
+                            <em>Figure 3:</em> Model of fingerpad contact (red), middle (beige), and base (blue) layers.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        
+                    </p>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/midassembly_cropped_nobg.png"
+                            alt="Photo of two pairs of partially assembled fingerpads, with mid-layers and base layers attached together and pneumatic connector adhered to back of base layer."
+                            width="400"
+                        />
+                    
+                        <figcaption>
+                            <em>Figure 4:</em> Photo of two pairs of partially assembled fingerpads.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        
+                    </p>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/ridges_short_sides_cropped.jpg"
+                            alt="Close-up photo of printed microtopography. The picture shows many rows of short rectangular ridges on top of a flat printed layer."
+                            width="200"
+                        />
+                    
+                        <figcaption>
+                            <em>Figure 5:</em> 
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        One interesting feature of these fingerpads is their ability to use morphological changes for more macro-scale grip interactions. While the friction between two flat surfaces is a very small-scale phenomenon, interlocking and enveloping interactions can create mechanical connections that are visible at the macro-scale and drastically alter grip friction.
+                    </p>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/envelop_cropped_smaller.png"
+                            alt="Close-up of friction-tuning fingerpads partially enveloping a small ball."
+                            width="200"
+                        />
+                    
+                        <figcaption>
+                            <em>Figure 6:</em> Inflated friction-tuning fingerpads partially enveloping a small convex object.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        
+                    </p>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/interlock_cannula_smaller_2.png"
+                            alt="Close-up of friction-tuning fingerpads partially interlocking with the flange of a cannula."
+                            width="300"
+                        />
+                    
+                        <figcaption>
+                            <em>Figure 7:</em> Deflated friction-tuning fingerpads partially interlocking with the flange on a small object.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        This work will be presented at the upcoming IEEE International Conference on Soft Robotics (RoboSoft) 2025 in Lausanne, Switzerland. For more information, see the conference paper.
+                    </p>
+
+                    <figure class="wrapfig">
+                        <img
+                            src="static/img/tube_cropped_smaller.png"
+                            alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a plastic tube."
+                            width="200"
+                        />
+                    
+                        <figcaption>
+                            <em>Figure 8:</em> Inflated adaptive gripper fingerpads gripping a cylindrical object.
                         </figcaption>
                     </figure>
                 </section>

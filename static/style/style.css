@@ -5,15 +5,18 @@ body {
 	--headerText: White;
 	--backgroundColour: White;
 	--backgroundAltColour: powderblue;
+	--headingBackgroundColour: mediumpurple;
 	--unvisitedHyperlink: Blue;
 	--clickedLinks: indigo ;
 	--activeHyperlink: Red;
 	
 	font-family: Trebuchet, sans-serif;
 	text-align: justify;
+  font-size:18px;
+
 	margin: 0;
 	color: var(--mainText);
-	max-width: 50em;
+	max-width: 80vw;
 	margin: 0px auto;
 	background-color: var(--backgroundColour);
 }
@@ -29,7 +32,7 @@ div.wrapper {
 header {
 	text-align: center;
 	text-transform: capitalize;
-	background-color:indigo;
+	background-color: var(--headerColour);
 	
 	width: 100%;
 	position: relative;
@@ -45,10 +48,22 @@ header h1 {
 
 /*prev powderblue */
 h2 {
-  background-color:mediumpurple;
+  background-color: var(--headingBackgroundColour);
   text-align:center;
 }
-  
+
+h3 {
+  color: var(--headerColour);
+  text-align: left;
+}
+
+.fullfig {
+  text-align: center;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: var(--backgroundColour);
+  padding: 1em;
+}
 
 .wrapfig {
   float: left;
@@ -68,8 +83,8 @@ h2 {
 }
 
 .projprop {
-  color: darkslategrey;
-  font-size: 0.8em;
+  color: darkorchid;
+  font-size:16px;
   list-style:none;
 }
 
@@ -85,6 +100,7 @@ h2 {
   display: flex;
   align-items: flex-start;
   height:max-content;
+  width:80vw;
   margin: 10px;
   padding: 25px;
   background-color: var(--backgroundColour);
@@ -92,9 +108,33 @@ h2 {
   border-radius: 10px;
 }
 
+.biobox {
+  display: flex;
+  align-items: flex-start;
+  height:max-content;
+  margin: 10px;
+  padding: 25px;
+  background-color: var(--backgroundColour);
+}
+
 .projcontent {
   width: 350px;
   height: 150px;
   margin: 10px;
   padding: 25px;
+}
+
+.biocontent {
+  height:max-content;
+  width:max-content;
+  margin: 10px;
+  padding: 25px;
+  background-color: var(--headerColour);
+  color: var(--headerText);
+  border-radius: 10px;
+}
+
+.biocontent a {
+	text-decoration: underline; 
+	color: var(--navText);
 }
