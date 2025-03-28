@@ -83,9 +83,10 @@ h3 {
 }
 
 .projprop {
-  color: darkorchid;
+  color: var(--headerColour);
   font-size:16px;
   list-style:none;
+  text-indent: 0%;
 }
 
 .box {
