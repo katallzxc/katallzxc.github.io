@@ -8,8 +8,6 @@
 </head>
 
 <body>
-    <!-- The main header used across all the pages of our website -->
-<div class="wrapper">
     <header>
         <h1>
             Katie Allison
@@ -17,71 +15,74 @@
     </header>
   
     <nav>
-        <!-- <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our team</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul> -->
-  
-    <!-- A Search form: another common non-linear way to navigate through a site. -->
-  
-        <!-- <form>
-            <input type="search" name="q" placeholder="Search query" />
-            <input type="submit" value="Go!" />
-        </form> -->
+        <div class="nav-flex">
+            <div class="nav-button">
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="nav-button">
+                <a href="#education">Education</a>
+            </div>
+            <div class="nav-button">
+                <a href="#experience">Experience</a>
+            </div>
+            <div class="nav-button">
+                <a href="#publications">Publications and Awards</a>
+            </div>
+        </div>
     </nav>
-  
-    <!-- Our page's main content -->
+
     <main>
-        <article id="intro">
-                    
-            <p>
-                Hi! I'm Katie, a roboticist and engineering design educator with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
-                This website showcases a selection of my recent projects and experiences. Feel free to reach out using the links below for more information.
-            </p>
+        <article id="intro">     
+            <section id="bio">
+                <div class="main-flex">
+                    <div class="bio-box">
+                        <p>
+                            Hi! I'm Katie, a roboticist and engineering design educator with a Master's of Applied Science (Mechanical Engineering) from the University of Toronto.
+                            This website showcases a selection of my recent projects and experiences. Feel free to reach out using the links below for more information.
+                        </p>
+                    </div>
 
-            <div class="biobox">
-                <figure class="fullfig">
-                    <img
-                        src="static/img/katie_headshot.JPG"
-                        alt="A picture of me."
-                        width="250"
-                    />
-                
-                    <figcaption>
-                    On University of Toronto campus, fall 2021.
-                    </figcaption>
-                </figure>
-                <div>
+                    <div class="bio-box">
+                        <figure class="fullfig">
+                            <img
+                                src="static/img/katie_headshot.JPG"
+                                alt="A picture of me."
+                                width="250"
+                            />
+                        
+                            <figcaption>
+                            Me at the University of Toronto in 2021.
+                            </figcaption>
+                        </figure>
+                    </div>
 
-                <div class="biocontent">
-
-                <p>
-                    <strong>Relevant links:</strong>
-
-                    <ul>
-                        <li>
-                            Visit my LinkedIn profile
-                        </li>
-                        <li>
-                            Visit my <a href=https://github.com/katallzxc>GitHub profile</a>
-                        </li>
-                        <li>
-                            Download my <a
-                                href="static/PDF/ResumeKatieAllison.pdf"
-                                download="ResumeKatieAllison.pdf">
-                                resume (PDF)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:katherineallison98@gmail.com">Email me</a>
-                        </li>
-                    </ul>
-                </p>
+                    <div class="bio-box">
+                        <div class="contact-list">
+                            <p>
+                                <strong>Links and contact information:</strong>
+                                <ul>
+                                    <li>
+                                        Download my <a
+                                            href="static/PDF/ResumeKatieAllison.pdf"
+                                            download="ResumeKatieAllison.pdf">
+                                            resume (PDF)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Visit my <a href="https://www.linkedin.com/in/katallison/">LinkedIn profile</a>
+                                    </li>
+                                    <li>
+                                        Visit my <a href=https://github.com/katallzxc>GitHub profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:katherineallison98@gmail.com">Email me</a>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
+            </section>
         </article>
 
         <article id="projects">
@@ -89,16 +90,16 @@
                 Projects
             </h2>
 
-            <div class="projgrid">
-                <div class="projbox">
-                <section class="cleared",id="proj-fingerpads">
+            <section id="proj-fingerpads">
+                <div class="proj-wrapper">
                     <h3>
                         <strong>Adaptive gripper fingerpads</strong> | M.A.Sc. thesis
                     </h3>
-                    <ul class="projprop">
-                        <li class="special"><strong>Role:</strong> Research student</li>
-                        <li><strong>Period:</strong> <span>2023-2024</span></li>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Research student</li>
+                        <li><strong>Period:</strong> 2023-2024</li>
                         <li><strong>Skills:</strong> CAD (Fusion 360, AutoCAD), CAM (3D printing, laser cutting, 5-axis CNC milling), power tools, assembly, pneumatics, elastomer moulding</li>
+                        <li><strong>Links:</strong> <a href="https://arxiv.org/abs/2502.00926">RoboSoft 2025 conference paper</a></li>
                     </ul>
 
                     <figure class="fullfig">
@@ -113,7 +114,7 @@
                         </figcaption>
                     </figure>
 
-                    <p>
+                    <!-- <p>
                         My Master's degree research focused on the design and characterization of these friction-tuning adaptive fingerpads. 
                         The fingerpads feature a thin, flexible contact layer atop a rigid base layer into which I milled pneumatic channels. 
                         These two layers are connected via an adhesive mid-layer with structured (patterned) cutouts. 
@@ -241,15 +242,21 @@
                         <figcaption>
                             <em>Figure 8:</em> Inflated adaptive gripper fingerpads gripping a cylindrical object.
                         </figcaption>
-                    </figure>
-                </section>
+                    </figure> -->
                 </div>
+            </section>
 
-                <div class="projbox">
-                <section id="proj-forcetest">
-                    <h3 style="color:darkblue;">
+            <section id="proj-forcetest">
+                <div class="proj-wrapper">
+                    <h3>
                         <strong>Linear shear force tester</strong> | M.A.Sc. thesis
                     </h3>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Research student</li>
+                        <li><strong>Period:</strong> 2021-2024</li>
+                        <li><strong>Skills:</strong> Microcontroller programming, soldering, motor control, sensor data processing, integration, CAD (Fusion 360, AutoCAD), CAM (3D printing, laser cutting), power tools and hand tools, assembly</li>
+                        <li><strong>Links:</strong> <a href="https://github.com/katallzxc/benchtop_force_tester_build">GitHub repository for hardware</a>, <a href="https://github.com/katallzxc/benchtop_force_tester_code">GitHub repository for software</a></li>
+                    </ul>
 
                     <figure class="wrapfig">
                         <img
@@ -262,14 +269,20 @@
                         Shear force tester (bottom, left) pictured with multi-channel pneumatic controller (top right).
                         </figcaption>
                     </figure>
-                </section>
                 </div>
+            </section>
 
-                <div class="projbox">
-                <section id="proj-reedscan">
-                    <h3 style="color:darkblue;">
+            <section id="proj-reedscan">
+                <div class="proj-wrapper">
+                    <h3>
                         <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
                     </h3>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Design engineer</li>
+                        <li><strong>Period:</strong> 2021, 2025</li>
+                        <li><strong>Skills:</strong> Microcontroller programming, soldering, assembly, motor control, sensor data processing, integration, user interface design, point cloud transformations</li>
+                        <li><strong>Links:</strong> N/A, proprietary</li>
+                    </ul>
 
                     <figure class="wrapfig">
                         <img
@@ -282,14 +295,20 @@
                         System scanning the 3D profile of one half of a double reed.
                         </figcaption>
                     </figure>
-                </section>
                 </div>
+            </section>
 
-                <div class="projbox">
-                <section id="proj-WISEworkshop">
-                    <h3 style="color:darkblue;">
-                        <strong>Introductory mechatronics workshop modules</strong> | Women in Robotics Ontario
+            <section id="proj-WISEworkshop">
+                <div class="proj-wrapper">
+                    <h3>
+                        Introductory mechatronics workshop modules | WISE National Conference
                     </h3>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Workshop organizer and Women in Robotics representative</li>
+                        <li><strong>Period:</strong> 2024-2025</li>
+                        <li><strong>Skills:</strong> Microcontroller programming, breadboarding, soldering, integration, CAD (AutoCAD), CAM (laser cutting), facilitation</li>
+                        <li><strong>Links:</strong> <a href="https://github.com/katallzxc/wisenc2025">GitHub repository</a>, <a href="https://wise.skule.ca">University of Toronto Women in Science and Engineering (WISE) website</a></li>
+                    </ul>
 
                     <figure class="wrapfig">
                         <img
@@ -302,14 +321,20 @@
                         Assorted sensor and actuator modules from Mechatronics 101 workshop.
                         </figcaption>
                     </figure>
-                </section>
                 </div>
+            </section>
 
-                <div class="projbox">
-                <section id="proj-ESC204workshop">
-                    <h3 style="color:darkblue;">
-                        <strong>Sensor and actuator laboratory activity modules</strong> | Division of Engineering Science (ESC204: Praxis III)
+            <section id="proj-ESC204workshop">
+                <div class="proj-wrapper">
+                    <h3>
+                        Sensor and actuator laboratory activity modules | Division of Engineering Science (ESC204: Praxis III)
                     </h3>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Course instructor (lead instructor for Systems Prototyping)</li>
+                        <li><strong>Period:</strong> 2021-2024</li>
+                        <li><strong>Skills:</strong> Microcontroller programming, breadboarding, technical writing</li>
+                        <li><strong>Links:</strong> <a href="https://engineering.calendar.utoronto.ca/course/esc204h1">ESC204 course description</a></li>
+                    </ul>
 
                     <figure class="wrapfig">
                         <img
@@ -322,13 +347,10 @@
                         Stacked student component kits from a sensor and actuator laboratory activity.
                         </figcaption>
                     </figure>
-                </section>
                 </div>
-            </div>
+            </section>
         </article>
-
-        <p class="cleared"></p>
-
+        
         <article id="education">
             <h2>
                 Education
@@ -338,20 +360,24 @@
                 <h3>
                     Master's of Applied Science in Mechanical Engineering
                 </h3>
-                
                 <p>
                     M.A.Sc. thesis, <em>Fingerpads with Adaptive Surface Properties for Robotic Gripping</em>, defended <strong><time datetime="2024-12">December 2024</time></strong>
                 </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
 
             <section id="BASc">
                 <h3>
                     Bachelor's of Applied Science in Engineering Science (Robotics Major)
                 </h3>
-                
                 <p>
                     B.A.Sc. thesis, <em>Control-theoretic model for flocculus to simulate optokinetic response behaviours</em>, presented <strong><time datetime="2021-03">March 2021</time></strong>
                 </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
         </article>
 
@@ -364,30 +390,60 @@
                 <h3>
                     Design Engineer | Legere Reeds Ltd.
                 </h3>
+                <p>
+                    16 month internship (May 2019 to Aug. 2020) and subsequent contract work
+                </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
 
             <section id="exp-CI">
                 <h3>
                     Course Instructor | Division of Engineering Science, University of Toronto
                 </h3>
+                <p>
+                    5 semesters (Jan. 2022 to present) plus teaching assistant appointments
+                </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
 
             <section id="exp-York">
                 <h3>
                     Research Assistant | York University
                 </h3>
+                <p>
+                    Undergraduate summer research (May 2017 to Aug. 2017)
+                </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
 
             <section id="exp-WIR">
                 <h3>
                     Chapter Organizer | Women in Robotics Ontario Chapter
                 </h3>
+                <p>
+                    Since chapter founding (Nov. 2022 to present)
+                </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
 
             <section id="exp-SFA">
                 <h3>
                     Standard First Aid Instructor | Lifesaving Society
                 </h3>
+                <p>
+                    8 years part-time (2014 to 2022)
+                </p>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
         </article>
 
@@ -400,7 +456,6 @@
                 <h3>
                     Publications
                 </h3>
-
                 <ul>
                     <li><strong>K. Allison</strong>, J. Kelly, and B. Hatton. ``Structured Pneumatic Fingerpads for Actively Tunable Grip Friction,'', to be presented at <em>2025 IEEE Intl. Conf. on Soft Robotics</em>, Lausanne, Apr. 2025. arxiv.org/abs/2502.00926</li>
                     <li>R. Codd-Downey, M. Jenkin and <strong>K. Allison</strong>, ``Milton: An open hardware underwater autonomous vehicle,'' <em>2017 IEEE Intl. Conf. on Information and Automation</em>, Macau, 2017, pp. 30-34, DOI:10.1109/ICInfA.2017.8078878.</li>
@@ -411,95 +466,22 @@
                 <h3>
                     Awards
                 </h3>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
 
             <section id="certificates">
                 <h3>
                     Certificates
                 </h3>
+                <ul>
+                    <li>TODO</li>
+                </ul>
             </section>
-
         </article>
-    
-        <!-- An article example -->
-        <!-- <article id="example">
-            <h2>Article heading</h2>
-  
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-            lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
-            viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
-            et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
-            congue enim, ut porta lorem lacinia consectetur.
-            </p>
 
-            <p>
-                I'm creating a link to
-                <a
-                    href="https://www.mozilla.org/en-US/"
-                    title="The best place to find more information about Mozilla's
-                        mission and how to contribute">
-                    the Mozilla homepage
-                </a>.
-            </p>
-  
-            <section>
-                <h3>Subsection</h3>
-  
-                <p>
-                Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
-                gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
-                dolor.
-                </p>
-  
-                <p>
-                Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-                dapibus, enim sit amet elit pharetra tincidunt feugiat nist
-                imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
-                odio eros.
-                </p>
-            </section>
-  
-            <section>
-                <h3>Another subsection</h3>
-    
-                <p>
-                Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-                soclis natoque penatibus et manis dis parturient montes, nascetur
-                ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
-                sem facilisis semper ac in est.
-                </p>
-    
-                <p>
-                Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-                tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-                ultricied. Curabitur ornare, ligula semper consectetur sagittis,
-                nisi diam iaculis velit, is fringille sem nunc vet mi.
-                </p>
-            </section>
-        </article> -->
-  
-        <!-- the aside content can also be nested within the main content -->
-        <!-- <aside>
-            <h2>Related</h2>
-  
-            <ul>
-                <li><a href="#">Oh I do like to be beside the seaside</a></li>
-                <li><a href="#">Oh I do like to be beside the sea</a></li>
-                <li><a href="#">Although in the North of England</a></li>
-                <li><a href="#">It never stops raining</a></li>
-                <li><a href="#">Oh well…</a></li>
-            </ul>
-        </aside> -->
     </main>
-  
-    <!-- The footer that is used across all the pages of our website -->
-  
-    <!-- <footer>
-        <p>©Copyright 2050 by nobody. All rights reversed.</p>
-    </footer> -->
-</div>
-</body>
 
+</body>
 </html>
