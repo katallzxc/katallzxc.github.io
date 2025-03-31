@@ -1,7 +1,6 @@
 /* General body style */
 body {
-  --navButtonCount: 4;
-  --headerShift: 10vw;
+  --navButtonCount: 5;
 
   --mainBack: white;
   --mainAltBack: powderblue;
@@ -62,8 +61,9 @@ nav {
 .nav-button {
   padding: 0.5em 0;
 
-  flex: calc(95% / var(--navButtonCount));
+  flex: calc(99% / var(--navButtonCount));
 
+  font-weight: bold;
   text-align: center;
 }
 
@@ -117,33 +117,132 @@ h3 {
   color: var(--headerBack);
 }
 
+/* List style */
+dt {
+  color: var(--headerBack);
+}
+
 /* Figure and caption style */
 figcaption {
   font-size: 14px;
+  text-align: center;
+
+  /* border: 5px solid green; */
 }
 
-/* figure{
-  border: 5px solid red;
+/* figcaption::before {
+  counter-increment: figure;
+  content: "Figure " counter(figure) " - ";
 } */
 
-/* .fullfig {
-  padding: 1em;
-  margin-right: 15px;
+.fig-box-full {
+  padding: 0 1em;
+  margin: 0 auto;
 
   text-align: center;
 
-  background-color: var(--backgroundColour);
-  border-radius: 5px;
-} */
+  /* border: 5px solid red; */
+}
 
-/* .wrapfig {
+.fig-box-full img {
+  margin: 0 auto;
+
+  max-width: 95%;
+  max-height: 450px;
+
+  /* border: 5px solid blue; */
+}
+
+.fig-box-full-tall{
+  padding: 0;
+  margin: 0 auto;
+
+  max-width: 49%;
+
+  text-align: center;
+
+  border: 5px solid red;
+}
+
+.fig-box-full-tall img {
+  margin: 0 auto;
+
+  max-width: 95%;
+  max-height: 550px;
+  object-fit: scale-down;
+
+  border: 5px solid blue;
+}
+
+.fig-wrap-text-tall {
+  padding: 10px;
+  min-width: 40%;
+  max-width: 100%;
+  /* border: 5px solid blue; */
+}
+
+.fig-flex {
+  padding: 0;
+  margin: 0 auto;
+
+  height: max-content;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:flex-end;
+
+  /* border: 5px solid cyan; */
+}
+
+.fig-box-partial{
+  padding: 0;
+  margin: 0 auto;
+
+  min-width: 250px;
+  max-height: 500px;
+
+  text-align: center;
+  /* border: 5px solid red; */
+}
+
+.fig-box-partial img {
+  margin: 0 auto;
+
+  max-width: 95%;
+  max-height: 350px;
+
+  /* border: 5px solid blue; */
+}
+
+.fig-flex .fig-box-partial {
+  max-width: 49%;
+}
+
+.fig-wrap-text {
+  padding: 10px;
+  min-width: 30%;
+  /* border: 5px solid blue; */
+}
+
+.fig-left {
   float: left;
-  padding: 1em;
-  margin-right: 15px;
-  
-  background-color: var(--backgroundColour);
-  border-radius: 5px;
-} */
+  padding: 0.5em 1em;
+  margin-right: 25px;
+
+  max-width: 45%;
+  border: 5px solid red;
+}
+
+.fig-right {
+  float: right;
+  padding: 0.5em 1em;
+  margin-left: 25px;
+
+  max-width: 45%;
+  border: 5px solid red;
+}
+.fig-right img{max-width:100%;}
 
 /* .cleared {
   clear: both;
