@@ -157,11 +157,11 @@ figcaption {
   padding: 0;
   margin: 0 auto;
 
-  max-width: 49%;
+  max-width: 40%;
 
   text-align: center;
 
-  border: 5px solid red;
+  /* border: 5px solid red; */
 }
 
 .fig-box-full-tall img {
@@ -171,7 +171,7 @@ figcaption {
   max-height: 550px;
   object-fit: scale-down;
 
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
 }
 
 .fig-wrap-text-tall {
