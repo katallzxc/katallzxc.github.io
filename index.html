@@ -2,6 +2,7 @@
 <head>
     <title>Katie Allison</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Personal website and portfolio.">
     <meta name="author" content="Katie Allison">
     <link rel="stylesheet" href="static/style/style.css" />
@@ -145,23 +146,25 @@
                     <p>
                         While developing the design for these fingerpads, I had two key design goals: first, creating adaptive surfaces that could measurably and repeatably tune friction at the grip interface; second, fabricating using common and/or inexpensive materials and processes. 
                         The layers (shown in Fig. 3) were fabricated as follows:
-                        <ol>
-                            <li>
-                                I laser cut the outline of the  <em>base</em> layer piece from acrylic and then used a CNC milling machine to cut the pneumatic channels. Acrylic can be difficult to machine, especially when using small bits, so this took some trial and error.
-                                To attach the base layer to a pneumatic controller, I drilled a hole through the back of the layer into the pneumatic channels, press-fit a luer lock fitting to the hole, and used two-part epoxy to seal the joint. 
-                                To attach the base layer to the gripper fingers, I 3D printed a mounting block with the Robotiq 2F-85 finger hole pattern and attached the block to the back of the base layer with epoxy.
-                            </li>
-                            <li>
-                                I laser cut the outline and active region (hole) pattern of the <em>middle</em> layer piece from 3M VHB tape (a strong double-sided acrylic foam core tape). 
-                                I then stuck one side of the middle layer to the base layer as shown in Fig. 4.
-                            </li>
-                            <li>
-                                The <em>contact</em> layer material and parameters were the main design variables, so the contact layers varied from thin, everyday tape pieces to custom printed microtopography elastomer surfaces. 
-                                I stuck the tape-based contact layers directly to adhesive mid-layers, but the relatively low surface energy of the printed surfaces interfered with interlayer adhesion. 
-                                To get these layers to adhere properly, I increased the post-assembly rest time and/or used plasma surface activation to treat the top layers pre-assembly. 
-                            </li>
-                        </ol>
-                        Once the fingerpads were assembled and epoxy joints had set, I used my lab's <a href="#proj-pneumatics">multichannel pneumatic controller</a> to test that the active regions of each fingerpad surface responded appropriately to pneumatic control inputs.
+                    </p>
+                    <ol>
+                        <li>
+                            I laser cut the outline of the  <em>base</em> layer piece from acrylic and then used a CNC milling machine to cut the pneumatic channels. Acrylic can be difficult to machine, especially when using small bits, so this took some trial and error.
+                            To attach the base layer to a pneumatic controller, I drilled a hole through the back of the layer into the pneumatic channels, press-fit a luer lock fitting to the hole, and used two-part epoxy to seal the joint. 
+                            To attach the base layer to the gripper fingers, I 3D printed a mounting block with the Robotiq 2F-85 finger hole pattern and attached the block to the back of the base layer with epoxy.
+                        </li>
+                        <li>
+                            I laser cut the outline and active region (hole) pattern of the <em>middle</em> layer piece from 3M VHB tape (a strong double-sided acrylic foam core tape). 
+                            I then stuck one side of the middle layer to the base layer as shown in Fig. 4.
+                        </li>
+                        <li>
+                            The <em>contact</em> layer material and parameters were the main design variables, so the contact layers varied from thin, everyday tape pieces to custom printed microtopography elastomer surfaces. 
+                            I stuck the tape-based contact layers directly to adhesive mid-layers, but the relatively low surface energy of the printed surfaces interfered with interlayer adhesion. 
+                            To get these layers to adhere properly, I increased the post-assembly rest time and/or used plasma surface activation to treat the top layers pre-assembly. 
+                        </li>
+                    </ol>
+                    <p>
+                        Once the fingerpads were assembled and epoxy joints had set, I used my lab's  <a href="#proj-pneumatics">multichannel pneumatic controller</a> to test that the active regions of each fingerpad surface responded appropriately to pneumatic control inputs.
                     </p>
 
                     <div class="fig-flex">

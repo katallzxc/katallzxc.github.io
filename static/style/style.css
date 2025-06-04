@@ -1,3 +1,6 @@
+html{
+  font-size: 16px;
+}
 /* General body style */
 body {
   --navButtonCount: 5;
@@ -16,7 +19,6 @@ body {
       
   font-family: "Trebuchet", "Open Sans", sans-serif;
   text-align: justify;
-  font-size: 18px;
   line-height: 1.6;
 
   color: var(--mainText);
@@ -90,10 +92,11 @@ nav a:hover{
 
 /* Main content style */
 .main{
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 section{
+  font-size: 1rem;
   margin: 0.5em auto;
   padding: 0;
 
@@ -136,10 +139,10 @@ dt {
 
 /* Figure and caption style */
 figcaption {
-  font-size: 14px;
+  font-size: 0.8rem;
   text-align: center;
 
-  /* border: 5px solid green; */
+  border: 1px solid gray;
 }
 
 /* figcaption::before {
@@ -232,6 +235,7 @@ figcaption {
 }
 
 .fig-wrap-text {
+  font-size: 1rem;
   padding: 10px;
   min-width: 30%;
   /* border: 5px solid blue; */
@@ -300,6 +304,7 @@ figcaption {
 }
 
 .proj-prop {
+  font-size: 1rem;
   list-style: none;
   color: var(--mainText);
 }
