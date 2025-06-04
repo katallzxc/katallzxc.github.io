@@ -142,7 +142,7 @@ figcaption {
   font-size: 0.8rem;
   text-align: center;
 
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
 /* figcaption::before {
