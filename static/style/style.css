@@ -98,7 +98,21 @@ nav a:hover{
 main{
   font-size: 1rem;
   /* position:absolute; */
-  padding-top: 6rem;
+  padding-top: 10rem;
+}
+
+@media screen and (min-width: 480px) {
+  main{
+    font-size: 1rem;
+    padding-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 1162px) {
+  main{
+    font-size: 1rem;
+    padding-top: 6rem;
+  }
 }
 
 section{
