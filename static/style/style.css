@@ -195,9 +195,9 @@ figcaption {
 
 .fig-flex {
   padding: 0;
-  margin: 0 auto;
+  margin: 30px auto;
 
-  height: max-content;
+  height: fit-content;
 
   display: flex;
   flex-wrap: wrap;
