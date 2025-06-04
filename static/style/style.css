@@ -14,7 +14,7 @@ body {
   --headerText: white;
 
   padding: 0;
-  margin: 140 0 0 0;
+  margin: 0;
   overflow-x: hidden;
       
   font-family: "Trebuchet", "Open Sans", sans-serif;
@@ -31,6 +31,7 @@ header {
   margin: 0;
 
   position: fixed;
+  z-index: 1;
   width: 100%;
   top:0;
 
@@ -51,7 +52,9 @@ header h1 {
 nav {
   padding: 0;
   margin: 0;
+
   position: fixed;
+  z-index: 1;
   width: 100%;
   top:50px;
   /* display: flex; */
@@ -70,8 +73,9 @@ nav {
 
 .nav-button {
   padding: 0.5em 0;
+  margin: 0 20;
 
-  flex: calc(99% / var(--navButtonCount));
+  flex: 1;
 
   font-weight: bold;
   text-align: center;
@@ -91,8 +95,10 @@ nav a:hover{
 }
 
 /* Main content style */
-.main{
+main{
   font-size: 1rem;
+  /* position:absolute; */
+  padding-top: 6rem;
 }
 
 section{
@@ -121,6 +127,29 @@ h2 {
   text-align: center;
 
   background-color: var(--headingBack);
+}
+
+.h2-container {
+  position: relative;
+}
+
+.h2-anchor {
+  position: absolute;
+  top: -10rem;
+}
+
+@media screen and (min-width: 480px) {
+  .h2-anchor {
+    position: absolute;
+    top: -8rem;
+  }
+}
+
+@media screen and (min-width: 1162px) {
+  .h2-anchor {
+    position: absolute;
+    top: -6rem;
+  }
 }
 
 h3 {
@@ -198,7 +227,7 @@ figcaption {
 
 .fig-flex {
   padding: 0;
-  margin: 30px auto;
+  margin: auto auto;
 
   height: fit-content;
 
@@ -266,7 +295,7 @@ figcaption {
 
 /* Bio style */
 .bio-box {
-  padding: 0;
+  padding: 4 0;
   margin: auto auto;
 
   min-width: 10vw;
