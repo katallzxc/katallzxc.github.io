@@ -175,6 +175,36 @@ h3 {
   color: var(--headerBack);
 }
 
+.h3-container {
+  position: relative;
+}
+
+.h3-anchor {
+  position: absolute;
+  top: -13rem;
+}
+
+@media screen and (min-width: 426px) {
+  .h3-anchor {
+    position: absolute;
+    top: -10rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .h3-anchor {
+    position: absolute;
+    top: -9rem;
+  }
+}
+
+@media screen and (min-width: 881px) {
+  .h3-anchor {
+    position: absolute;
+    top: -7.5rem;
+  }
+}
+
 /* List style */
 dt {
   color: var(--headerBack);
