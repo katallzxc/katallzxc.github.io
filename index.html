@@ -423,50 +423,6 @@
                 </div>
             </section>
 
-            <section id="proj-reedscan">
-                <div class="proj-wrapper">
-                    <h3>
-                        <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
-                    </h3>
-                    <ul class="proj-prop">
-                        <li><strong>Role:</strong> Design engineer</li>
-                        <li><strong>Period:</strong> 2021, 2025</li>
-                        <li><strong>Skills:</strong> Microcontroller programming in MicroPython, soldering, assembly, motor control, sensor data processing, integration, user interface design, point cloud transformations</li>
-                        <li><strong>Links:</strong> N/A, proprietary</li>
-                    </ul>
-                    <div class="fig-flex">
-                        <figure class="fig-box-full">
-                            <img
-                            src="static/img/legere_scanner_partialclean.png"
-                            alt="Dual-stage confocal-light-based scanner, shown as view of dual-axis linear stage and partial view of motor control circuitry and sensor controller units."
-                            />
-                        
-                            <figcaption>
-                                <em>Figure 1</em>: System scanning the 3D profile of one half of a double reed.
-                            </figcaption>
-                        </figure>
-                        <div class="fig-wrap-text">
-                            <p>
-                                While working for <a href="https://www.legere.com">Legere Reeds Ltd.</a> (the world's leading synthetic reed manufacturer), I designed the code and circuits for a confocal-light-based 2.5D scanning system. 
-                                The confocal light sensor, a high-precision 1D laser displacement sensor, performs well on curved and rough surfaces, so it was well-suited to the task of profiling the curve of a translucent synthetic reed. 
-                                My employer designed the mechanical components of the system (including the bi-level mounting plate, the dual-axis linear stage, the mount for the sensor, and the small double reed mounting piece). 
-                                I designed the motor control circuitry, the connections to the confocal displacement sensor and the axis endstop switches, the scanning system logic, the user interface, and the data analysis code.
-                                This was my first real hardware project, and it was an excellent learning experience--having the opportunity to build on my existing mechanical and software skills by designing an embedded system start-to-finish really helped me to connect and integrate my scattered knowledge from circuit/electronics coursework.
-                            </p>
-                            <p>
-                                I used a Raspberry Pi single-board computer to control the scanner system. 
-                                
-                                I developed the code entirely in Python, using Tkinter to create a graphical user interface for running scans.
-                                To run the scan, I wrote a scanning routine that passed the reed under the confocal displacement sensor in a raster pattern. 
-                                Sensor measurements were recorded at regular intervals and used to create a point cloud representing the reed's height at each gridpoint. 
-                                I used transformation matrices and outlier rejection to process the scan data, resulting in a fairly flat-based and low-noise scanned surface map.
-                                The scanner works well and consistently, with a z-accuracy within 5 microns in a typical scan.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section id="proj-reedcode">
                 <div class="proj-wrapper">
                     <h3>
@@ -499,6 +455,50 @@
                         I wrote the majority of the code in VBA (since that was what the manufacturing staff were used to and comfortable debugging if need be) but also did some data analysis with Python here and there.
                         I have since worked for Legere Reeds Ltd. on a contract basis to make occasional updates and modifications to the code.
                     </p>
+                </div>
+            </section>
+
+            <section id="proj-reedscan">
+                <div class="proj-wrapper">
+                    <h3>
+                        <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
+                    </h3>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Design engineer</li>
+                        <li><strong>Period:</strong> 2021, 2025</li>
+                        <li><strong>Skills:</strong> Microcontroller programming in MicroPython, soldering, assembly, motor control, sensor data processing, integration, user interface design, point cloud transformations</li>
+                        <li><strong>Links:</strong> N/A, proprietary</li>
+                    </ul>
+                    <div class="fig-flex">
+                        <figure class="fig-box-full">
+                            <img
+                            src="static/img/legere_scanner_partialclean.png"
+                            alt="Dual-stage confocal-light-based scanner, shown as view of dual-axis linear stage and partial view of motor control circuitry and sensor controller units."
+                            />
+                        
+                            <figcaption>
+                                <em>Figure 1</em>: System scanning the 3D profile of one half of a double reed.
+                            </figcaption>
+                        </figure>
+                        <div class="fig-wrap-text">
+                            <p>
+                                While working for <a href="https://www.legere.com">Legere Reeds Ltd.</a> (the world's leading synthetic reed manufacturer), I designed the code and circuits for a confocal-light-based 2.5D scanning system. 
+                                The confocal light sensor, a high-precision 1D laser displacement sensor, performs well on curved and rough surfaces, so it was well-suited to the task of profiling the curve of a translucent synthetic reed. 
+                                <!-- My employer designed the mechanical components of the system (including the bi-level mounting plate, the dual-axis linear stage, the mount for the sensor, and the small double reed mounting piece).  -->
+                                I designed the motor control circuitry, the connections to the confocal displacement sensor and the axis endstop switches, the scanning system logic, the user interface, and the data analysis code.
+                                This was my first real hardware project, and it was an excellent learning experience--having the opportunity to build on my existing mechanical and software skills by designing an embedded system start-to-finish really helped me to connect and integrate my scattered knowledge from circuit/electronics coursework.
+                            </p>
+                            <p>
+                                I used a Raspberry Pi single-board computer to control the scanner system. 
+                                
+                                I developed the code entirely in Python, using Tkinter to create a graphical user interface for running scans.
+                                To run the scan, I wrote a scanning routine that passed the reed under the confocal displacement sensor in a raster pattern. 
+                                Sensor measurements were recorded at regular intervals and used to create a point cloud representing the reed's height at each gridpoint. 
+                                I used transformation matrices and outlier rejection to process the scan data, resulting in a fairly flat-based and low-noise scanned surface map.
+                                The scanner works well and consistently, with a z-accuracy within 5 microns in a typical scan.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
