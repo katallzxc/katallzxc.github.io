@@ -480,20 +480,24 @@
                     </ul>
 
                     <p>
-                        During my undergrad internship, I spent 16 months redesigning the software system that Legere Reeds Ltd. uses to manufacture their reeds. 
-                        This system uses reed design information stored in Excel sheets and text documents and, from this design information, generates a model of the final reed, takes in a series of machining sequence parameters, and generates G-code that controls a CNC machine and cuts the reed from a stock sheet of plastic. 
-                        I am not at liberty to divulge many of the details of this project, but suffice to say that overhauling this software was a massive undertaking. 
-                        The original software was written in VBA and used a different script for each individual reed design. 
+                        During my 16-month undergrad internship, I worked for Legere Reeds Ltd., the world's leading synthetic reed maker. 
+                        I successfully redesigned the software system that controls reed manufacturing, achieving a machining accuracy of 5 microns in the z direction and improving system usability and maintainability.
+                        My software now produces reeds that are used extensively on Broadway and in some of the world's leading orchestras.
+                    </p>
+                    <p> 
+                        The updated production software system, like the original software system, is written in Microsoft Visual Basic Access (VBA), facilitating data transfer between Excel spreadsheets and structured data/log text files. 
+                        The system takes in reed design information stored in text files and, from this design information, generates a model of the final reed, takes in a series of machining sequence parameters, and generates G-code that controls a CNC machine to cut the reed from a stock sheet of plastic. 
+                        The original software used a different spreadsheet (and associated VBA script) for each individual reed design. 
                         This distributed set of scripts made it difficult for the original code authors to write consistent code and made altering the system in any way a massive high-effort undertaking. 
-                        I reported directly to the company President and developed a software map based on his main vision for the software: to have a system that uses only a few centralized software tools to create the manufacturing code for all of the different reed products.
+                        I reported directly to the company president and developed a software map based on his vision: a system that uses only a few centralized software tools to create the manufacturing code for all of the different reed products.
                     </p>
                     <p>
                         During my internship, I developed a centralized CAM tool that took in text files with design, machining sequence, and tool information for any product and any machine and generated valid G-code. 
-                        I also developed tools to generate and edit the reed CAD data, machining sequence parameters, tool and machine design. 
+                        I also developed tools to generate and edit the reed CAD data, machining sequence parameters, and tool and machine data. 
                         To streamline my debugging process and augment the manufacturing staff's pre-manufacturing verification processes, I also built a few software tools to simulate and compare different design files or G-code files.
                         I also designed a graphical user interface for the tools (in consultation with the end users, the manufacturing staff) and wrote extensive user documentation and some technical reference materials.
                         I wrote the majority of the code in VBA (since that was what the manufacturing staff were used to and comfortable debugging if need be) but also did some data analysis with Python here and there.
-                        I have since worked for Legere Reeds Ltd. on a contract basis to make occasional updates and modifications to the code, and I am currently completing a final contract to add some additional documentation and code fixes while I look for a full-time job.
+                        I have since worked for Legere Reeds Ltd. on a contract basis to make occasional updates and modifications to the code.
                     </p>
                 </div>
             </section>
