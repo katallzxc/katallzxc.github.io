@@ -1,0 +1,623 @@
+<html lang="en-CA">
+<head>
+    <title>Katie Allison</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Personal website and portfolio.">
+    <meta name="author" content="Katie Allison">
+    <link rel="stylesheet" href="../../static/style/accordion-style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            Katie Allison
+        </h1>
+    </header>
+
+    <main>
+
+        <article id="proj">
+
+            <section id="proj-fingerpads">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                    <h3>
+                        <strong>Adaptive gripper fingerpads</strong> | M.A.Sc. thesis
+                        <span class="arrow">&#9660;</span>
+                    </h3>
+                    
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Research student</li>
+                        <li><strong>Period:</strong> 2023-2024</li>
+                        <li><strong>Skills:</strong> CAD (Fusion 360, AutoCAD), CAM (FDM and SLA 3D printing, laser cutting, 3-axis and 5-axis CNC milling), power tools, assembly, pneumatics, elastomer moulding</li>
+                        <li><strong>Links:</strong> <a href="https://arxiv.org/abs/2502.00926">RoboSoft 2025 conference paper</a></li>
+                    </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="fig-flex">
+                            <figure class="fig-box-full">
+                                <img
+                                    src="../../static/img/full_gripped_ball_smaller.png"
+                                    alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a small spherical object."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 1:</em> Inflated adaptive gripper fingerpads gripping a round object.
+                                </figcaption>
+                            </figure>
+                            <div class="fig-wrap-text">
+                                <p>
+                                    My Master's degree research focused on the design and characterization of friction-tuning adaptive fingerpads for robotic grippers (shown in Fig. 1). 
+                                    The fingerpads feature a thin, flexible contact layer atop a rigid base layer into which I milled pneumatic channels. 
+                                    These two layers are connected via an adhesive mid-layer with structured (patterned) cutouts. 
+                                    When the fingerpad's internal pneumatic chamber is inflated or deflated, the contact surface deflects up or down in each of the structured active regions defined by these mid-layer cutouts (as shown in Fig. 2). 
+                                    My thesis tested the extent to which these actively adaptive fingerpads could modify grip friction when installed in place of a commercially available two-fingered gripper's stock fingerpads.
+                                </p>
+                            </div>
+                        </div>
+
+                        <figure class="fig-box-full">
+                            <img
+                                src="../../static/img/modes_gripping_activetopography.png"
+                                alt="Schematic showing sample gripping 'modes' for actively adaptive fingerpads. Neutral, inflated, and deflated modes are depicted."
+                            />
+                            <figcaption>
+                            <em>Figure 2:</em> Depiction of gripping 'modes' for actively adaptive fingerpads with surface microtopography. 
+                            When the fingerpads are inflated as in (c), their surfaces push closer to a gripped object than in the neutral state shown in (a); conversely, when the fingerpads are deflated as in (b), their active region surfaces retract away from a gripped object.
+                            </figcaption>
+                        </figure>
+
+                        <p>
+                            While developing the design for these fingerpads, I had two key design goals: first, creating adaptive surfaces that could measurably and repeatably tune friction at the grip interface; second, fabricating using common and/or inexpensive materials and processes. 
+                            The layers (shown in Fig. 3) were fabricated as follows:
+                        </p>
+                        <ol>
+                            <li>
+                                I laser cut the outline of the  <em>base</em> layer piece from acrylic and then used a CNC milling machine to cut the pneumatic channels. Acrylic can be difficult to machine, especially when using small bits, so this took some trial and error.
+                                To attach the base layer to a pneumatic controller, I drilled a hole through the back of the layer into the pneumatic channels, press-fit a luer lock fitting to the hole, and used two-part epoxy to seal the joint. 
+                                To attach the base layer to the gripper fingers, I 3D printed a mounting block with the Robotiq 2F-85 finger hole pattern and attached the block to the back of the base layer with epoxy.
+                            </li>
+                            <li>
+                                I laser cut the outline and active region (hole) pattern of the <em>middle</em> layer piece from 3M VHB tape (a strong double-sided acrylic foam core tape). 
+                                I then stuck one side of the middle layer to the base layer as shown in Fig. 4.
+                            </li>
+                            <li>
+                                The <em>contact</em> layer material and parameters were the main design variables, so the contact layers varied from thin, everyday tape pieces to custom printed microtopography elastomer surfaces. 
+                                I stuck the tape-based contact layers directly to adhesive mid-layers, but the relatively low surface energy of the printed surfaces interfered with interlayer adhesion. 
+                                To get these layers to adhere properly, I increased the post-assembly rest time and/or used plasma surface activation to treat the top layers pre-assembly. 
+                            </li>
+                        </ol>
+                        <p>
+                            Once the fingerpads were assembled and epoxy joints had set, I used my lab's  <a href="#proj-pneumatics">multichannel pneumatic controller</a> to test that the active regions of each fingerpad surface responded appropriately to pneumatic control inputs.
+                        </p>
+
+                        <div class="fig-flex">
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/finger_assembly_nobasesplit_cropped.png"
+                                    alt="Exploded model showing CAD parts for the three layers of an adaptive fingerpad."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 3:</em> Model of fingerpad contact (red), middle (beige), and base (blue) layers.
+                                </figcaption>
+                            </figure>
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/midassembly_cropped_nobg.png"
+                                    alt="Photo of two pairs of partially assembled friction-tuning fingerpads, with mid-layers and base layers attached together and pneumatic connector adhered to back of base layer."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 4:</em> Photo of two pairs of partially assembled fingerpads.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <p >
+                            The fingerpads that I tested the most extensively simply used PVC (electrical) tape pieces as their contact layers. 
+                            Even with these simple surfaces, actuating the fingerpads produced significant differences in shear friction. 
+                            For instance, the force required to pull a PTFE-wrapped wooden block from between two adaptive fingerpads (using <a href="#proj-forcetest">my shear force test setup</a>) was 62% higher when the fingerpad active regions were inflated after gripping. 
+                            Interestingly, deflating the fingerpads after gripping had almost no impact on grip friction despite the contact area reduction caused by retraction of the fingerpad active regions. 
+                            Using the printed microtopography surfaces (e.g., the ridge surface shown in Fig. 5) increased friction overall (i.e., increased the force necessarily to initiate and maintain sliding of a gripped object), with otherwise similar frictional behaviour to the PVC fingerpads.
+                        </p>
+
+                        <div class="fig-flex">
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/ridges_short_sides_cropped.jpg"
+                                    alt="Close-up photo of printed microtopography. The picture shows many rows of short rectangular ridges on top of a flat printed layer."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 5:</em>  Close-up photo of printed surface with short ridge (blocky) microtopography features distributed across the active regions.
+                                </figcaption>
+                            </figure>
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/tube_cropped_smaller.png"
+                                    alt="Robotiq 2F-85 gripper with adaptive gripper fingerpads gripping a plastic tube."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 6:</em> Inflated adaptive gripper fingerpads gripping a cylindrical object.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <p>
+                            Some recent works (e.g., <a href="https://ieeexplore.ieee.org/document/10522022">Pozzi et al.</a> in 2024 or <a href="https://ieeexplore.ieee.org/document/8989824">He et al.</a> in 2020) use pneumatically actuated soft fingers or fingerpads as both sensors and actuators. 
+                            In addition to controlling fingerpad behaviour, air pressure signals are used to detect changes in the shape of the fingerpads. 
+                            As a proof of concept, I explored this sensory ability of the adaptive fingerpads by gripping various object shapes (e.g., the tube in Fig. 6) with inflated fingerpads and recording the changes in pressure that occurred when the gripped object compressed the inflated fingerpad regions. 
+                            Pressure increases were visible within the fingerpad pressure data in a fraction of a second after object contact, indicating that my fingerpad design could also be used for basic object detection.
+                        </p>
+                        <p>
+                            One interesting feature of these fingerpads is their ability to use morphological changes for more macro-scale grip interactions. 
+                            While the friction between two flat surfaces is a very small-scale phenomenon, interlocking (Fig. 8) and enveloping (Fig. 7) interactions can create mechanical connections that are visible at the macro-scale and drastically alter grip friction.
+                            If an object is interlocking with deflated fingerpad active regions, for instance, pulling the object out of the gripper doesn't just require overcoming friction between two flat surfaces. 
+                            Rather, the gripped object must be pulled hard enough to physically deform the fingerpad surface in order to release the interlocking object parts.
+                        </p>
+
+                        <div class="fig-flex">
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/envelop_cropped_smaller.png"
+                                    alt="Close-up of friction-tuning fingerpads partially enveloping a small ball."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 7:</em> Inflated fingerpads partially enveloping a small convex object.
+                                </figcaption>
+                            </figure>
+
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/interlock_cannula_smaller_2.png"
+                                    alt="Close-up of friction-tuning fingerpads partially interlocking with the flange of a cannula."
+
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 8:</em> Deflated fingerpads partially interlocking with the flange on a small object.
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <p>
+                            This work will be presented at the upcoming <a href="https://robosoft2025.org">IEEE International Conference on Soft Robotics (RoboSoft) 2025</a> in Lausanne, Switzerland. 
+                            For more information, see the <a href="https://arxiv.org/abs/2502.00926">conference paper</a>. 
+                            I will also add a link to my thesis document itself once it is released in the public domain!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proj-forcetest">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                        <h3>
+                            <strong>Linear shear force tester</strong> | M.A.Sc. thesis
+                        <span class="arrow">&#9660;</span>
+                        </h3>
+                        <ul class="proj-prop">
+                            <li><strong>Role:</strong> Research student</li>
+                            <li><strong>Period:</strong> 2021-2024</li>
+                            <li><strong>Skills:</strong> Microcontroller programming, soldering, motor control, sensor data processing, integration, CAD (Fusion 360, AutoCAD), CAM (3D printing, laser cutting), power tools and hand tools, assembly</li>
+                            <li><strong>Links:</strong> <a href="https://github.com/katallzxc/benchtop_force_tester_build">GitHub repository for hardware</a>, <a href="https://github.com/katallzxc/benchtop_force_tester_code">GitHub repository for software</a></li>
+                        </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            During my Master's, I built a custom shear force test apparatus to run experiments that would allow me to characterize the friction-tuning properties of my adaptive robotic gripper fingerpads
+                            I started with a pre-assembled ballscrew system (screw, base, carriage, and stepper motor) and built the remainder of the system from scratch. 
+                        </p>
+                        <div class="fig-flex">
+                            <figure class="fig-box-full-tall">
+                                <img
+                                    src="../../static/img/shear_test_front_clean.png"
+                                    alt="Action shot of force gauge in shear force tester applying shear force to an object in the Robotiq gripper's grasp"
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 1</em>: Shear force tester while measuring the frictional force acting between a test block and adaptive fingerpads on a Robotiq 2F-85 gripper.
+                                </figcaption>
+                            </figure>
+                            <div class="fig-wrap-text-tall">
+                                <p> 
+                                    I used different force gauges and different device form factors when testing new surface designs in isolation vs. testing fully implemented gripper fingerpads, so I had to set up the force tester in a way that allowed me to easily swap out components or test structures.
+                                    Among other tasks, I: 
+                                    <ul>
+                                        <li>
+                                            designed and 3D printed limit switch mounts to keep the axis endstop sensors in place,
+                                        </li>
+                                        <li>
+                                            constructed an easy-connect test platform using aluminum extrusion (80-20) and a plate with an array of threaded holes (a <a href="https://www.smallrig.com/cool-cheese-plate-v3-multi-purpose-mounting-plate-1092.html">"cheeseplate"</a>),
+                                        </li>
+                                        <li>
+                                            designed and laser cut coupling plates to connect two different force gauges to the tester carriage,
+                                        </li>
+                                        <li>
+                                            designed, tested, and soldered a motor control circuit, using an inexpensive microcontroller to save money and mounting the microcontroller on headers to facilitate replacement,
+                                        </li>
+                                        <li>
+                                            designed and laser cut a mounting bracket to attach the Robotiq 2F-85 gripper to the test platform,
+                                        </li>
+                                        <li>
+                                            designed and 3D printed an assortment of sliding clamps, positioning jigs, and other tools to constrain the position of test samples relative to the test platform in a repeatable manner, and 
+                                        </li>
+                                        <li>
+                                            designed and constructed a spring-loaded upper constraint plate to apply pressure to flat device samples during testing (mimicking the pressure that would be applied to a gripped object).
+                                        </li>
+                                    </ul>
+                                    ... basically, a LOT of CAD-CAM to facilitate repeatable experimental results!
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            I also wrote quite a bit of code to facilitate shear testing. 
+                            I wrote routines to control the motion of the stage, calibrate position using endstops, and read sensor data. 
+                            I also wrote code to control the gripper and read its status, and integrated the gripper code, force sensor code, motor control code, and pneumatics control code (discussed below) to create a unified, usable system. 
+                            I knew that I would have to conduct hundreds if not thousands of shear tests throughout my experimental work, so it was important to me to minimize the effort required to run each test. 
+                            Automating tasks like motor position calibration or force data scaling, cropping, and export allowed me to focus on observing qualitative aspects of the experiments, knowing that quantitative data was being gathered in the background. 
+                            I am currently in the process of cleaning up and organizing this code for use by future students, and will be adding the code to the repository for this project when finished.
+                        </p>
+                        <div class="fig-flex">
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/shear_test_overview_clean.png"
+                                    alt="Lead screw system with force gauge and robotic gripper installed, pictured with its microcontroller-based motor control circuit."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 2:</em> Shear force tester: a high-capacity force gauge sits on the carriage, which is actuated by a stepper motor (controlled by the microcontroller circuit in the top left and an unpictured stepper driver) to pull objects from the Robotiq gripper's grasp.
+                                </figcaption>
+                            </figure>
+
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/shear_test_single_setup.jpg"
+                                    alt="Shear force tester with a different force gauge installed and pulling a load across a flat adaptive surface rather than from between gripper fingers."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 3:</em> Shear force test procedure used in early prototyping to test friction between a single flat adaptive surface device and a test sled. This stage of testing used a lower-capacity force gauge.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proj-pneumatics">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                        <h3>
+                            <strong>Multichannel pneumatic controller</strong> | M.A.Sc. thesis
+                        <span class="arrow">&#9660;</span>
+                        </h3>
+                        <ul class="proj-prop">
+                            <li><strong>Role:</strong> Research student</li>
+                            <li><strong>Period:</strong> 2021-2024</li>
+                            <li><strong>Skills:</strong> Microcontroller programming, soldering, motor control, sensor data processing, integration, CAD (Fusion 360, AutoCAD), CAM (3D printing, laser cutting), power tools and hand tools, assembly</li>
+                            <li><strong>Links:</strong> <a href="https://github.com/katallzxc/benchtop_pneumatics_8output">GitHub repository</a></li>
+                        </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="fig-flex">
+                            <figure class="fig-box-full">
+                                <img
+                                    src="../../static/img/pneumatics.png"
+                                    alt="Picture of a custom pneumatic control apparatus."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 1</em>: Multi-channel pneumatic controller.
+                                </figcaption>
+                            </figure>
+                            <div class="fig-wrap-text">
+                                <p>
+                                    The adaptive friction-tuning gripper fingerpads that I designed during my Master's are actuated using pneumatic control, with different channels independently controlling different fingerpads. 
+                                    When I started my degree, there was already an existing multichannel pneumatic control apparatus that had been designed by a previous student, but the apparatus had become damaged over time. 
+                                    The Arduino microcontroller code that controlled the system was also set up for only a few specific procedures and lacked some of the operations and communication abilities that I needed. 
+                                    I therefore spent a bit of time fixing the apparatus and rewriting its software.
+                                </p>
+                                <p>
+                                    Specifically, I rebuilt damaged/loose power connections and replaced various jumper wire connections with screw terminal connections. 
+                                    I still think that the apparatus (Fig. 1) has a great deal of room for improvement, but the wiring is now significantly more controlled and less vulnerable to loose or detached connections.  
+                                    I also rewrote the code to use a modular approach in which the Arduino could receive two-letter command codes from a higher-level testing program over serial, interpret the commands, and return pressure or state information as needed. 
+                                    The Arduino runs a continuous control loop and regulates pressure in a positive and negative set of input channels on an ongoing basis, and opens valves to connect these channels to output devices (Figs. 2,3) upon request.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="fig-flex">
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/pneumatic_fitting_attached_edit.png"
+                                    alt="Picture of a luer lock fitting connecting a tube to a simple tape-covered pneumatic channel device which has been mounted to a metal plate."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 2:</em> Early adaptive surface device prototype with attached luer lock fitting and supply tube.
+                                </figcaption>
+                            </figure>
+
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/inflated.png"
+                                    alt="Close-up photo of a pair of inflated active fingerpad devices."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 3:</em> Inflated PVC-based fingerpad devices. The active regions are the raised sections of the fingerpad surface.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proj-reedcode">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                        <h3>
+                            <strong>Revamp of VBA-based custom CAD-CAM system</strong> | Legere Reeds Ltd.
+                        <span class="arrow">&#9660;</span>
+                        </h3>
+                        <ul class="proj-prop">
+                            <li><strong>Role:</strong> Design engineer</li>
+                            <li><strong>Period:</strong> 2019-2021, 2025</li>
+                            <li><strong>Skills:</strong> Software development in VBA and Python, user interface design, technical writing and code documentation</li>
+                            <li><strong>Links:</strong> N/A, proprietary</li>
+                        </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            During my 16-month undergrad internship, I worked for Legere Reeds Ltd., the world's leading synthetic reed maker. 
+                            I successfully redesigned the software system that controls reed manufacturing, achieving a machining accuracy of 5 microns in the z direction and improving system usability and maintainability.
+                            My software now produces reeds that are used extensively on Broadway and in some of the world's leading orchestras.
+                        </p>
+                        <p> 
+                            The updated production software system, like the original software system, is written in Microsoft Visual Basic Access (VBA), facilitating data transfer between Excel spreadsheets and structured data/log text files. 
+                            The system takes in reed design information stored in text files and, from this design information, generates a model of the final reed, takes in a series of machining sequence parameters, and generates G-code that controls a CNC machine to cut the reed from a stock sheet of plastic. 
+                            The original software used a different spreadsheet (and associated VBA script) for each individual reed design. 
+                            This distributed set of scripts made it difficult for the original code authors to write consistent code and made altering the system in any way a massive high-effort undertaking. 
+                            I reported directly to the company president and developed a software map based on his vision: a system that uses only a few centralized software tools to create the manufacturing code for all of the different reed products.
+                        </p>
+                        <p>
+                            During my internship, I developed a centralized CAM tool that took in text files with design, machining sequence, and tool information for any product and any machine and generated valid G-code. 
+                            I also developed tools to generate and edit the reed CAD data, machining sequence parameters, and tool and machine data. 
+                            To streamline my debugging process and augment the manufacturing staff's pre-manufacturing verification processes, I also built a few software tools to simulate and compare different design files or G-code files.
+                            I also designed a graphical user interface for the tools (in consultation with the end users, the manufacturing staff) and wrote extensive user documentation and some technical reference materials.
+                            I wrote the majority of the code in VBA (since that was what the manufacturing staff were used to and comfortable debugging if need be) but also did some data analysis with Python here and there.
+                            I have since worked for Legere Reeds Ltd. on a contract basis to make occasional updates and modifications to the code.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proj-reedscan">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                        <h3>
+                            <strong>Dual-axis confocal-light-based 3D scanning system</strong> | Legere Reeds Ltd.
+                        <span class="arrow">&#9660;</span>
+                        </h3>
+                        <ul class="proj-prop">
+                            <li><strong>Role:</strong> Design engineer</li>
+                            <li><strong>Period:</strong> 2021, 2025</li>
+                            <li><strong>Skills:</strong> Microcontroller programming in MicroPython, soldering, assembly, motor control, sensor data processing, integration, user interface design, point cloud transformations</li>
+                            <li><strong>Links:</strong> N/A, proprietary</li>
+                        </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="fig-flex">
+                            <figure class="fig-box-full">
+                                <img
+                                src="../../static/img/legere_scanner_partialclean.png"
+                                alt="Dual-stage confocal-light-based scanner, shown as view of dual-axis linear stage and partial view of motor control circuitry and sensor controller units."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 1</em>: System scanning the 3D profile of one half of a double reed.
+                                </figcaption>
+                            </figure>
+                            <div class="fig-wrap-text">
+                                <p>
+                                    While working for <a href="https://www.legere.com">Legere Reeds Ltd.</a> (the world's leading synthetic reed manufacturer), I designed the code and circuits for a confocal-light-based 2.5D scanning system. 
+                                    The confocal light sensor, a high-precision 1D laser displacement sensor, performs well on curved and rough surfaces, so it was well-suited to the task of profiling the curve of a translucent synthetic reed. 
+                                    <!-- My employer designed the mechanical components of the system (including the bi-level mounting plate, the dual-axis linear stage, the mount for the sensor, and the small double reed mounting piece).  -->
+                                    I designed the motor control circuitry, the connections to the confocal displacement sensor and the axis endstop switches, the scanning system logic, the user interface, and the data analysis code.
+                                    This was my first real hardware project, and it was an excellent learning experience--having the opportunity to build on my existing mechanical and software skills by designing an embedded system start-to-finish really helped me to connect and integrate my scattered knowledge from circuit/electronics coursework.
+                                </p>
+                                <p>
+                                    I used a Raspberry Pi single-board computer to control the scanner system. 
+                                    
+                                    I developed the code entirely in Python, using Tkinter to create a graphical user interface for running scans.
+                                    To run the scan, I wrote a scanning routine that passed the reed under the confocal displacement sensor in a raster pattern. 
+                                    Sensor measurements were recorded at regular intervals and used to create a point cloud representing the reed's height at each gridpoint. 
+                                    I used transformation matrices and outlier rejection to process the scan data, resulting in a fairly flat-based and low-noise scanned surface map.
+                                    The scanner works well and consistently, with a z-accuracy within 5 microns in a typical scan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proj-ESC204workshop">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                    <h3>
+                        Sensor and actuator laboratory activity modules | Division of Engineering Science (ESC204: Praxis III)
+                    <span class="arrow">&#9660;</span>
+                    </h3>
+                    <ul class="proj-prop">
+                        <li><strong>Role:</strong> Course instructor (lead instructor for Systems Prototyping)</li>
+                        <li><strong>Period:</strong> 2021-2024</li>
+                        <li><strong>Skills:</strong> Microcontroller programming in CircuitPython, breadboarding, technical writing</li>
+                        <li><strong>Links:</strong> <a href="https://engineering.calendar.utoronto.ca/course/esc204h1">ESC204 course description</a></li>
+                    </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="fig-flex">
+                            <figure class="fig-box-full">
+                                <img
+                                src="../../static/img/ESC204_workshop_all_cropped.png"
+                                alt="Stacked plastic containers and plastic bags with labels indicating the components inside and the associated laboratory activity."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 1</em>: Stacked student component kits from a sensor and actuator laboratory activity.
+                                </figcaption>
+                            </figure>
+                            <div class="fig-wrap-text">
+                                <p>
+                                    ESC204 is a relatively new course in the Engineering Science program. 
+                                    The course first ran in Fall 2021, replacing an older mechatronics prototyping course as the core design course for second-year EngSci students. 
+                                    ESC204 is considered a "capstone" course for the first half of the EngSci program. 
+                                    Each year, our 220-300 students are first guided through a "Prototyping Bootcamp" phase, where they learn the basics of microcontroller circuits and programming as well as CAD-CAM design for rapid prototyping (3D printing/laser cutting). 
+                                    After the Bootcamp phase ends, students work in an "opportunity space" (i.e., a broad issue or field within a broad and typically global geographic area) in teams and propose a mechatronic or Internet of Things (IoT) design concept that could provide value to stakeholders living/working in that opportunity space.
+                                    In the final phase of the course, students apply their hands-on prototyping skills to specify, build, and test one or more high-fidelity prototypes for their proposed design concept.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            I first started working with the course as a course development teaching assistant (TA) in early 2021, and was then a studio (tutorial) TA in the first run of the course in Fall 2021. 
+                            In subsequent semesters, I took on a course instructor role and became the lead instructor for the systems prototyping part of the course. 
+                            In this role, I was responsible for developing the Prototyping Bootcamp materials (i.e., drafting lab documents, liaising with the fabrication facility to acquire electronic components and arrange rapid fabrication, design assessments, etc.). 
+                            I also supported students through their prototyping in later parts of the course, both by delivering lectures and writing guides and by providing 1-1 support.
+                        </p>
+                        <p>
+                            Working as a course instructor over the last few years has given me the opportunity to work on a variety of rewarding projects (including an assessment system that automatically imports data from rubrics for calibration, a >200 page Prototyping Handbook document, and various CAD tutorial videos and resources), but I want to highlight the lab activities that I developed for the Prototyping Bootcamp phase.
+                            Previous teaching team members drafted the first iteration of the lab materials, and when I became an instructor, I made it my mission to significantly expand and deepen these materials. I wrote pre-lab and lab instructions with structured callout boxes and multiple types of circuit representations, wrote Handbook chapters with deeper theoretical information (e.g., explaining the types of constraints in parametric CAD software), and organized lab equipment dispersal to improve clarity for students and ease the workload for TAs. 
+                            Fig. 1 shows some of the kits that I put together, where I separated components by circuit type (e.g., with the components for a DC motor circuit in one bin and the components for a solenoid circuit in another) and used a labelmaker to identify each container and list the specific components that were included. 
+                            I have heard from some former students that they have gone on to use the lab documents and Handbook in upper-year coursework, and I have also frequently found my own resources useful when mentoring non-EngSci students---having an explanatory resource on hand is always helpful.
+                            I've also noticed that the specific parts organization protocol that I followed made labs run more smoothly and freed up TA time to help students rather than requiring them to distribute components constantly. 
+                            I have even used materials that I developed for these labs as a starting point when developing workshops for outreach or inclusion events! Overall, I'm proud of my work in this course, and the experience of writing lab documents has taught me how to communicate technical information more clearly and effectively.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proj-WISEworkshop">
+                <div class="proj-wrapper">
+                    <button class="accordion-title">
+                        <h3>
+                            Introductory mechatronics workshop modules | WISE National Conference
+                        <span class="arrow">&#9660;</span>
+                        </h3>
+                        <ul class="proj-prop">
+                            <li><strong>Role:</strong> Workshop organizer and Women in Robotics representative</li>
+                            <li><strong>Period:</strong> 2024-2025</li>
+                            <li><strong>Skills:</strong> Microcontroller programming in MicroPython, breadboarding, soldering, integration, CAD (AutoCAD), CAM (laser cutting), facilitation</li>
+                            <li><strong>Links:</strong> <a href="https://github.com/katallzxc/wisenc2025">GitHub repository</a>, <a href="https://www.womeninrobotics.org">Women in Robotics website</a>, <a href="https://wise.skule.ca">University of Toronto Women in Science and Engineering (WISE) website</a></li>
+                        </ul>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="fig-flex">
+                            <figure class="fig-box-full">
+                                <img
+                                    src="../../static/img/wise_workshop_all_cropped.png"
+                                    alt="Various sensor and actuator circuit modules displayed on a table, each packaged in a wooden enclosure from which only the transducer and input wires are accessible."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 1</em>: Assorted sensor and actuator modules from Mechatronics 101 workshop.
+                                </figcaption>
+                            </figure>
+                            <div class="fig-wrap-text">
+                                <p>
+                                    This "Mechatronics 101" workshop was created for the Women in Science and Engineering National Conference in Toronto in January 2025. 
+                                    I designed and fabricated the workshop modules solo and co-facilitated the workshop day-of with my fellow Women in Robotics Ontario Chapter organizer, Mia. 
+                                    Unlike the materials that I created for the Praxis III course, the materials for this workshop had to be accessible for an audience with widely varying base knowledge. 
+                                    Attendees ranged in age from high school students to graduate students and, although some were in engineering programs (or even former students), many were in non-engineering programs. 
+                                    Accordingly, I created a workshop that would provide a gentle introduction for beginners while still engaging those with relevant experience.
+                                    
+                                    I framed the workshop around the following description: 
+                                    <blockquote>
+                                        <em>Mechatronic systems are everywhere! Learn how to write software to control hardware, then practice combining sensor and actuator modules to design and test functional mechatronic systems.</em>
+                                    </blockquote>
+                                </p>
+                            </div>
+                        </div>
+
+                        <p>
+                            Breadboarding your first microcontroller circuit can be tricky. 
+                            Moreover, circuits and hardware can be particularly intimidating for women (who tend to have less exposure to and social contact with hands-on skills in childhood and adolescence). 
+                            I wanted to reduce the barrier to entry and allow participants to get a taste of the joy of building mechatronic systems! 
+                            So, rather than tasking participants with building sensor and actuator modules from scratch, I blackboxed the components themselves by enclosing the sensor and actuator circuits in laser-cut wooden boxes, abstracting them to just the sensor and power, ground, and logic/signal wires. 
+                            This simplified each component to allow participants to focus on the key connections: power and data. 
+                            This allowed participants to spend their time integrating different sensors and actuators and creating satisfying working systems rather than fiddling with resistors and jumper wires!
+                        </p>
+                        <p>
+                            According to the conference organizers, the workshop was very well received: 
+                        </p>
+                        <blockquote>
+                            "Your workshop was by far the highlight of Saturday -- afterwards, we got so much feedback from attendees that they enjoyed your workshop in particular. 
+                            I think you both took our push for interactivity and amped it up to 100, which truly set it apart. The effort you put into sourcing and laser cutting all the required parts was honestly beyond our expectations. 
+                            Thank you so much for putting in the effort to make something truly special!"
+                        </blockquote>
+                        <p>
+                            We also received positive feedback from participants directly, some of whom went on to join Women in Robotics Ontario.
+                            Other event organizers have since reached out to plan a similar workshop, and we hope to reuse the modules and repeat the workshop very soon!
+                        </p>
+                        <p>
+                            I enjoyed this project because it gave me a chance to design for user experience and aesthetics. 
+                            Typically, my circuits are housed in functional but boring enclosures. 
+                            I wanted these cases to be both instructive and attractive (or at least visually unobtrusive)! 
+                            I really enjoy thinking about how a design will be interpreted and paying attention to the details of fabrication (as opposed to the "quick and dirty" approach encouraged in prototyping in research work), so I'm looking forward to doing more of this detail-oriented, user-focused design and fabrication work in the future.
+                        </p>
+                        <div class="fig-flex">
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/WISE_workshop_mcu.jpg"
+                                    alt="A microcontroller with an attached USB cable. The microcontroller is inserted into a breadboard and most of the exposed breadboard area is covered with a labelled shield with holes for specific pins."
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 2:</em> Raspberry Pi Pico microcontroller inserted into solderless breadboard and covered. The cover guides the user to relevant pins (power, ground, GPIO).
+                                </figcaption>
+                            </figure>
+
+                            <figure class="fig-box-partial">
+                                <img
+                                    src="../../static/img/WISE_workshop_photoresistor.jpg"
+                                    alt="Photoresistor sensor module, with wooden box enclosing the sensor circuit and revealing only the sensor element and 3 wires for power, ground, and data."
+
+                                />
+                            
+                                <figcaption>
+                                    <em>Figure 3:</em> Photoresistor module. The photoresistor can be easily inserted or removed without damage, facilitating reuse of both sensor and enclosure.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <p>
+                            <em>Some specific fabrication details</em>: Laser-cutting box joint teeth into the sides of the wood facilitated quick assembly. Laser engraving allowed me to add instructions and labels. 
+                            I used an open source box generator [[boxes.py]] to design the side profiles, then sketched engravings and through-cut lines in AutoCAD. 
+                            I submitted my drawings to the laser cutting and engraving service at my university's fabrication facility, and then simply friction-fit the box joints together. 
+                            I assembled the circuits by either soldering wires together directly (for simple circuits) or soldering circuits using protoboard. 
+                            The participant groups each received a Raspberry Pi Pico microcontroller board that was inserted into a solderless breadboard and covered by a laser -cut pin shield that left only select (labeled) power, ground, and GPIO pins visible. 
+                            I also provided sample MicroPython code (which I used to test every module prior to the workshop).
+                        </p>
+                        <p>
+                            The modules weren't perfect--there are some issues to fix before round 2, e.g., insufficient clearance for the box hinges in some cases. 
+                            However, I'm overall quite proud of achieving such an ambitious workshop plan. 
+                            To prepare for the workshop, I designed and tested 40 total boxes in 7 distinct designs and 8 types of components, assembled the boxes, laid out and soldered the circuits, and prepared participant materials all over the course of 1 month while also finishing revisions to my thesis and conference paper. 
+                            Moreover, I was operating with restrictive financial constraints, with a budget of less than $100 for a 100-person workshop. 
+                            The Myhal Fabrication Facility's low-cost rental program made this easier, but low budget definitely still severely constrained my fabrication options. 
+                            Creating this workshop was a daunting task, but seeing the participants enjoying themselves integrating different sensors and motors to create basic mechatronics systems made the work worth it.
+                            I look forward to updating the module designs for future use!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- Link to the external JavaScript file -->
+    <!-- Source for button code: https://medium.com/@francesco.saviano87/building-a-simple-faq-accordion-with-html-css-and-javascript-2a8aed32badf-->
+    <script src="../../static/scripts/script.js"></script>
+</body>
+</html>
