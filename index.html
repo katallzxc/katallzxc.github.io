@@ -447,19 +447,20 @@
                         </figure>
                         <div class="fig-wrap-text">
                             <p>
-                                While working for <a href="https://www.legere.com">Legere Reeds Ltd.</a>, I designed the code and circuits for a confocal-light-based 2.5D scanning system. 
-                                The confocal displacement sensor (<a href="https://www.keyence.com/products/measure/laser-1d/cl-3000/">Keyence</a>) is a high-precision 1D laser displacement sensor that performs well on curved and rough surfaces. 
+                                While working for <a href="https://www.legere.com">Legere Reeds Ltd.</a> (the world's leading synthetic reed manufacturer), I designed the code and circuits for a confocal-light-based 2.5D scanning system. 
+                                The confocal light sensor, a high-precision 1D laser displacement sensor, performs well on curved and rough surfaces, so it was well-suited to the task of profiling the curve of a translucent synthetic reed. 
                                 My employer designed the mechanical components of the system (including the bi-level mounting plate, the dual-axis linear stage, the mount for the sensor, and the small double reed mounting piece). 
                                 I designed the motor control circuitry, the connections to the confocal displacement sensor and the axis endstop switches, the scanning system logic, the user interface, and the data analysis code.
                                 This was my first real hardware project, and it was an excellent learning experience--having the opportunity to build on my existing mechanical and software skills by designing an embedded system start-to-finish really helped me to connect and integrate my scattered knowledge from circuit/electronics coursework.
                             </p>
                             <p>
                                 I used a Raspberry Pi single-board computer to control the scanner system. 
-                                I soldered a motor control circuit using protoboard and connected the circuit outputs to the motor wires with twist nuts for ease of repair and assembly.
-                                I developed the code entirely in Python, and used Tkinter to create a graphical user interface for running scans.
+                                
+                                I developed the code entirely in Python, using Tkinter to create a graphical user interface for running scans.
                                 To run the scan, I wrote a scanning routine that passed the reed under the confocal displacement sensor in a raster pattern. 
                                 Sensor measurements were recorded at regular intervals and used to create a point cloud representing the reed's height at each gridpoint. 
                                 I used transformation matrices and outlier rejection to process the scan data, resulting in a fairly flat-based and low-noise scanned surface map.
+                                The scanner works well and consistently, with a z-accuracy within 5 microns in a typical scan.
                             </p>
                         </div>
                     </div>
